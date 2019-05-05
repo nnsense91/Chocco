@@ -1,0 +1,83 @@
+.why {
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url(../img/why/leaf.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    position: relative;    
+}
+
+.why__raspberry {
+    position: absolute;
+    bottom: rem(-110px);
+}
+
+.container--why {
+    display: flex;
+    align-items: center;    
+}
+
+.why__title-block {
+    width: 43.7%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.why__title-desc {
+    @include desc;
+    margin-top: rem(8px);
+}
+
+.why__advantages {
+    display: flex;
+    margin-top: rem(57px);
+    text-align: center;
+}
+
+.why__advantages-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32%;
+    margin-left: rem(77px);
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:not(:first-child) {
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: rem(67px);
+            height: rem(21px);
+            background-image: url(../img/why/discs.png);
+            left: -25%;
+            top: 20%;
+        }
+    }
+}
+
+.why__advantages-pic {
+    height: rem(125px);
+    width: rem(125px);
+    border-radius: 50%;
+    background-color: $grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        display: block;        
+    }
+}
+
+.why__advantages-title {
+    margin-top: rem(30px);
+}
+
+.why__advantage-desc {
+    @include desc;
+    font-weight: 300;
+    margin-top: rem(20px);
+}

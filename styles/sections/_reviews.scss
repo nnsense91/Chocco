@@ -1,0 +1,108 @@
+.reviews {
+    height: 100vh;
+    position: relative;
+}
+
+.reviews__strawberry {
+    position: absolute;
+    right: 0;
+}
+
+.container--reviews {
+    display: flex;
+    align-items: center;
+}
+
+.reviews__title {
+    text-align: center;
+}
+
+.reviews__top-avatar {    
+    img {        
+        width: 100%;
+    }    
+}
+
+.reviews__top-review {
+    margin-top: rem(45px);
+    display: flex;
+    background-image: url(../img/reviews/raspberries.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    padding: rem(50px) 0 rem(50px) rem(45.5px);
+}   
+
+.reviews__top-content {
+    width: 50%;   
+    margin-left: rem(20px);
+}
+
+.reviews__top-title {
+    margin-top: rem(12px);
+    font-family: AlegreyaSans;
+    font-size: 30px;
+    font-weight: 500;
+    font-style: normal;
+    color: #323232;    
+}
+
+.reviews__top-text {
+    margin-top: rem(24px);    
+    @include desc;
+    line-height: normal;
+}
+
+.reviews__top-author {
+    display: block;
+    @include desc;
+    font-weight: 500;
+    margin-top: rem(26px);
+}
+
+
+.reviews__all {
+    margin-top: rem(38px);
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+.reviews__all-item {
+    margin-left: rem(42px);
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.reviews__all-pic {
+    width: rem(92.5px);
+    height: rem(92.5px);    
+    background-size: contain;
+    border-radius: 50%;
+}
+
+@each $item in (girl, girl2, guy) {
+    .reviews__all-#{$item} {
+        background-image: url(../img/reviews/#{$item}.jpg);
+        background-repeat: no-repeat;
+    }
+}
+
+.reviews--active {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;        
+        width: rem(92px);
+        height: rem(92px);
+        border: rem(8px) solid $green;
+        background-color: $green;
+        border-radius: 50%;
+        top: rem(-8px);
+        left: rem(-8px);
+        z-index: -1;
+    }
+}

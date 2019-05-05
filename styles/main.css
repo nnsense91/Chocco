@@ -1,0 +1,548 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+ul, li, p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block; }
+
+ul {
+  list-style: none; }
+
+.wrapper {
+  margin: 0 auto;
+  min-width: 1100px;
+  height: 100%; }
+
+.container {
+  margin: 0 auto;
+  max-width: 940px;
+  height: 100%; }
+
+h2 {
+  font-family: AlegreyaSans;
+  font-size: 48px;
+  font-weight: bold;
+  font-style: normal;
+  color: #0d0d0d;
+  text-transform: uppercase; }
+
+h3 {
+  font-family: AlegreyaSans;
+  font-size: 27px;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000; }
+
+@font-face {
+  font-family: "AlegreyaSans";
+  src: url(../fonts/AlegreyaSans-Black.woff) format("woff");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: "AlegreyaSans";
+  src: url(../fonts/AlegreyaSans-BlackItalic.woff) format("woff");
+  font-weight: 900;
+  font-style: italic; }
+
+@font-face {
+  font-family: "AlegreyaSans";
+  src: url(../fonts/AlegreyaSans-Bold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "AlegreyaSans";
+  src: url(../fonts/AlegreyaSans-BoldItalic.woff) format("woff");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: "AlegreyaSans";
+  src: url(../fonts/AlegreyaSans-ExtraBold.woff) format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: "AlegreyaSans";
+  src: url(../fonts/AlegreyaSans-ExtraBoldItalic.woff) format("woff");
+  font-weight: 800;
+  font-style: italic; }
+
+@font-face {
+  font-family: "AlegreyaSans";
+  src: url(../fonts/AlegreyaSans-Light.woff) format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "AlegreyaSans";
+  src: url(../fonts/AlegreyaSans-Light.woff) format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "AlegreyaSans";
+  src: url(../fonts/AlegreyaSans-LightItalic.woff) format("woff");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: "AlegreyaSans";
+  src: url(../fonts/AlegreyaSans-Medium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "AlegreyaSans";
+  src: url(../fonts/AlegreyaSans-MediumItalic.woff) format("woff");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: "AlegreyaSans";
+  src: url(../fonts/AlegreyaSans-Regular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "AlegreyaSans";
+  src: url(../fonts/AlegreyaSans-Thin.woff) format("woff");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: "AlegreyaSans";
+  src: url(../fonts/AlegreyaSans-ThinItalic.woff) format("woff");
+  font-weight: 100;
+  font-style: italic; }
+
+@font-face {
+  font-family: "MuseoSansCyrl";
+  src: url(../fonts/MuseoSansCyrl-500.woff) format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+.header {
+  width: 100%;
+  height: 100px;
+  color: #ffffff; }
+
+.header__content {
+  padding-top: 1.4375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.sidebar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #ffffff;
+  font-family: AlegreyaSans;
+  font-size: 1.125rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  margin-left: -0.9375rem; }
+
+.sidebar__item {
+  margin-left: 1.6875rem; }
+  .sidebar__item:first-child {
+    margin-left: 0; }
+
+.header__logo {
+  font-family: "MuseoSansCyrl";
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 0.88; }
+
+.header__phone a {
+  font-family: AlegreyaSans;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  position: relative; }
+  .header__phone a::before {
+    content: '';
+    display: inline;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-image: url(../img/welcome/phone.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -1.125rem;
+    top: 0.5rem; }
+
+.welcome {
+  width: 100%;
+  height: 100vh;
+  color: #ffffff;
+  background-color: #61c4d9;
+  background-image: url(../img/welcome/banner.jpg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative; }
+
+.welcome__fruit-pic {
+  position: absolute;
+  bottom: -3.25rem;
+  right: 0.8125rem;
+  z-index: 1; }
+
+.container--welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.welcome__main-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.welcome__main-text {
+  z-index: 2;
+  width: 50%; }
+
+.welcome__main-pic {
+  position: absolute;
+  right: -3.4375rem;
+  top: -7.5rem; }
+
+.welcome__title {
+  font-family: AlegreyaSans;
+  font-size: 3.75rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  text-align: left;
+  text-transform: uppercase; }
+
+.welcome__desc {
+  margin-top: 10px;
+  font-family: AlegreyaSans;
+  font-size: 1.3125rem;
+  font-weight: normal;
+  font-style: normal; }
+
+.welcome__button {
+  margin-top: 2.0625rem;
+  color: #0f5a47;
+  font-family: AlegreyaSans;
+  font-size: 1.1875rem;
+  font-weight: 800;
+  font-style: normal;
+  text-transform: uppercase;
+  padding: 1.125rem 2.1875rem;
+  border: transparent;
+  border-radius: 1.875rem;
+  background-color: #ffffff; }
+  .welcome__button:hover {
+    cursor: pointer; }
+
+.welcome__advantages {
+  position: relative;
+  z-index: 2;
+  margin-top: 4.25rem;
+  padding-bottom: 2.9375rem; }
+
+.welcome__advantages-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-left: 3.4375rem; }
+
+.welcome__advantages-item {
+  position: relative;
+  font-family: AlegreyaSans;
+  font-size: 1rem;
+  font-weight: normal;
+  font-style: normal;
+  width: 20%;
+  margin-left: 90px; }
+  .welcome__advantages-item:first-child {
+    margin-left: 0; }
+  .welcome__advantages-item:nth-child(2) {
+    padding-left: 0.4375rem; }
+  .welcome__advantages-item:nth-child(3) {
+    margin-left: 73px; }
+
+.ico_leaf::before {
+  content: '';
+  position: absolute;
+  width: 3.125rem;
+  height: 3.125rem;
+  background-image: url(../img/welcome/ico_leaf.png);
+  background-repeat: no-repeat;
+  left: -3.4375rem; }
+
+.ico_truck::before {
+  content: '';
+  position: absolute;
+  width: 3.125rem;
+  height: 3.125rem;
+  background-image: url(../img/welcome/ico_truck.png);
+  background-repeat: no-repeat;
+  left: -3.4375rem; }
+
+.ico_cm::before {
+  content: '';
+  position: absolute;
+  width: 3.125rem;
+  height: 3.125rem;
+  background-image: url(../img/welcome/ico_cm.png);
+  background-repeat: no-repeat;
+  left: -3.4375rem; }
+
+.aside {
+  position: fixed;
+  top: 33.5%;
+  right: 3.125rem;
+  z-index: 10; }
+  .aside__item {
+    margin: 0 0 0.96875rem 0; }
+  .aside__link {
+    position: relative;
+    width: 0.375rem;
+    height: 0.375rem;
+    display: block;
+    border-radius: 50%;
+    background-color: #fff; }
+
+.aside__active::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #fff; }
+
+.why {
+  height: 100vh;
+  margin: 0 auto;
+  background-image: url(../img/why/leaf.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  position: relative; }
+
+.why__raspberry {
+  position: absolute;
+  bottom: -6.875rem; }
+
+.container--why {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.why__title-block {
+  width: 43.7%;
+  margin: 0 auto;
+  text-align: center; }
+
+.why__title-desc {
+  font-family: AlegreyaSans;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  color: #666666;
+  margin-top: 0.5rem; }
+
+.why__advantages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3.5625rem;
+  text-align: center; }
+
+.why__advantages-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 32%;
+  margin-left: 4.8125rem; }
+  .why__advantages-item:first-child {
+    margin-left: 0; }
+  .why__advantages-item:not(:first-child)::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 4.1875rem;
+    height: 1.3125rem;
+    background-image: url(../img/why/discs.png);
+    left: -25%;
+    top: 20%; }
+
+.why__advantages-pic {
+  height: 7.8125rem;
+  width: 7.8125rem;
+  border-radius: 50%;
+  background-color: #f2f5f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .why__advantages-pic img {
+    display: block; }
+
+.why__advantages-title {
+  margin-top: 1.875rem; }
+
+.why__advantage-desc {
+  font-family: AlegreyaSans;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  color: #666666;
+  font-weight: 300;
+  margin-top: 1.25rem; }
+
+.reviews {
+  height: 100vh;
+  position: relative; }
+
+.reviews__strawberry {
+  position: absolute;
+  right: 0; }
+
+.container--reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.reviews__title {
+  text-align: center; }
+
+.reviews__top-avatar img {
+  width: 100%; }
+
+.reviews__top-review {
+  margin-top: 2.8125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url(../img/reviews/raspberries.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  padding: 3.125rem 0 3.125rem 2.84375rem; }
+
+.reviews__top-content {
+  width: 50%;
+  margin-left: 1.25rem; }
+
+.reviews__top-title {
+  margin-top: 0.75rem;
+  font-family: AlegreyaSans;
+  font-size: 30px;
+  font-weight: 500;
+  font-style: normal;
+  color: #323232; }
+
+.reviews__top-text {
+  margin-top: 1.5rem;
+  font-family: AlegreyaSans;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  color: #666666;
+  line-height: normal; }
+
+.reviews__top-author {
+  display: block;
+  font-family: AlegreyaSans;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  color: #666666;
+  font-weight: 500;
+  margin-top: 1.625rem; }
+
+.reviews__all {
+  margin-top: 2.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.reviews__all-item {
+  margin-left: 2.625rem; }
+  .reviews__all-item:first-child {
+    margin-left: 0; }
+
+.reviews__all-pic {
+  width: 5.78125rem;
+  height: 5.78125rem;
+  background-size: contain;
+  border-radius: 50%; }
+
+.reviews__all-girl {
+  background-image: url(../img/reviews/girl.jpg);
+  background-repeat: no-repeat; }
+
+.reviews__all-girl2 {
+  background-image: url(../img/reviews/girl2.jpg);
+  background-repeat: no-repeat; }
+
+.reviews__all-guy {
+  background-image: url(../img/reviews/guy.jpg);
+  background-repeat: no-repeat; }
+
+.reviews--active {
+  position: relative; }
+  .reviews--active::before {
+    content: '';
+    position: absolute;
+    width: 5.75rem;
+    height: 5.75rem;
+    border: 0.5rem solid #0f5a47;
+    background-color: #0f5a47;
+    border-radius: 50%;
+    top: -0.5rem;
+    left: -0.5rem;
+    z-index: -1; }

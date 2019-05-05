@@ -1,0 +1,57 @@
+.header {
+    width: 100%;
+    height: 100px;
+    color: $white;
+}
+
+.header__content {
+    padding-top: rem(23px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar__list {
+    display: flex;
+    color: $white;
+    font-family: AlegreyaSans;
+    font-size: rem(18px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    margin-left: rem(-15px);
+}
+
+.sidebar__item {
+    margin-left: rem(27px);
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+
+.header__logo {
+    font-family: "MuseoSansCyrl";
+    text-transform: uppercase;
+    font-size: rem(24px);
+    line-height: 0.88;
+}
+
+.header__phone a {
+    font-family: AlegreyaSans;
+    font-size: rem(24px);
+    font-weight: normal;
+    font-style: normal;
+    position: relative;
+    &::before {
+        content: '';
+        display: inline;
+        width: rem(12px);
+        height: rem(12px);
+        background-image: url(../img/welcome/phone.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        left: rem(-18px);
+        top: rem(8px);
+    }
+}
