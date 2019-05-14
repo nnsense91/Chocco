@@ -1,0 +1,93 @@
+.team {    
+    height: 100vh;
+}
+
+.container--team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team__title {
+    text-align: center;
+}
+
+.team__list {
+    margin-top: rem(70px);
+    display: flex;    
+}
+
+.team__item {
+    display: flex;
+    flex-direction: column;
+    width: 23.6%;
+    flex-wrap: wrap;
+}
+
+.team__avatar {
+    height: rem(288px);
+    width: rem(222px);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.team__item {
+    text-align: center;
+    margin-left: rem(16px);
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:nth-child(even){
+        margin-top: rem(50px);
+    }
+}
+
+.team__name {
+    display: block;
+    margin-top: rem(25px);
+    font-family: AlegreyaSans;
+    font-size: rem(21px);
+    font-weight: 500;   
+    color: #323232;
+    text-align: center;
+}
+
+.team__post {
+    position: relative;
+    display: block;
+    margin-top: rem(8px);
+    font-family: AlegreyaSans;
+    font-size: rem(18px);
+    font-weight: normal;    
+    color: #281e1e;
+    cursor: pointer;
+
+    &::after {
+        content: ''; 
+        position: absolute; /* Абсолютное позиционирование */
+        right: rem(60px); top: rem(7px); /* Положение треугольника */
+        border: rem(5px) solid transparent; /* Прозрачные границы */
+        border-top: rem(6px) solid #0f5a47; /* Добавляем треугольник */        
+    }    
+}
+
+.team__desc {
+    height: 0;
+    overflow: hidden;
+    margin-top: rem(4px);
+    font-family: AlegreyaSans;
+    font-size: rem(18px);
+    font-weight: 300;    
+    color: #666666;
+}
+
+.team__post--active {
+    &::after {
+        content: ''; 
+        position: absolute; /* Абсолютное позиционирование */
+        right: rem(60px); top: rem(2px); /* Положение треугольника */
+        border: rem(5px) solid transparent; /* Прозрачные границы */
+        border-bottom: rem(6px) solid #0f5a47; /* Добавляем треугольник */
+    }    
+}

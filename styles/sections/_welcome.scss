@@ -107,18 +107,14 @@
     }
 }
 
-@each $item in (leaf, truck, cm) {
-    .ico_#{$item} {
-        &::before {
-            content: '';
-            position: absolute;
-            width: rem(50px);
-            height: rem(50px);
-            background-image: url(../img/welcome/ico_#{$item}.png);
-            background-repeat: no-repeat;
-            left: rem(-55px);
-        }
-    }
+.welcome__advantages-ico {
+    position: absolute;
+    left: rem(-55px);
+    top: rem(-50px);
+    fill: transparent;
+    stroke: #b0f7ff;
+    stroke-width: rem(0.8px);
+    width: rem(48px);
 }
 
 .aside {
