@@ -1,0 +1,201 @@
+.order {
+  height: 100vh;
+  background-image: url(../img/order/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #0f5a47;
+  position: relative;
+}
+
+.order__berry {
+  position: absolute;
+  left: rem(20px);
+  bottom: 25%;
+}
+
+.order__leaf {
+  position: absolute;
+  right: 0;
+  bottom: 25%;
+}
+
+.order__leafs {
+  position: absolute;
+  right: 0;
+  top: rem(-130px);
+}
+
+.container--order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input {
+  @include inputStyle;
+  height: rem(60px);
+  font-family: AlegreyaSans;
+  font-size: 18px;
+}
+
+textarea {
+  display: block;
+}
+
+.order__title {
+  text-align: center;
+  color: #0f5a47;
+}
+
+.order__label {
+  display: block;
+  width: 100%;
+  font-family: AlegreyaSans;
+  font-size: rem(18px);
+  color: #0f5a47;
+  line-height: 1.67;
+  margin-top: rem(10px);
+}
+
+.order__label--half {
+  width: 48%;
+}
+
+.order__label--full {
+  width: 100%;
+}
+
+.order__label--quad {
+  width: 22%;
+}
+
+
+
+.order__form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: rem(28px);
+}
+
+.order__content {
+  width: 49%;
+}
+
+.order__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order__comment {
+  @include inputStyle;
+  max-height: rem(180px);  
+}
+
+.order__interface {
+  margin-top: rem(10px);
+}
+
+input[type="checkbox"]:checked, 
+input[type="checkbox"]:not(:checked), 
+input[type="radio"]:checked, 
+input[type="radio"]:not(:checked) 
+{
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="checkbox"]:checked + label, 
+input[type="checkbox"]:not(:checked) + label, 
+input[type="radio"]:checked + label, 
+input[type="radio"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: rem(35px);    
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before, 
+input[type="checkbox"]:not(:checked) + label:before,
+input[type="radio"]:checked + label:before, 
+input[type="radio"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: rem(26px);
+    height: rem(26px);
+    background-color: #ffffff;
+}
+
+input[type="checkbox"]:checked + label:before, 
+input[type="checkbox"]:not(:checked) + label:before {
+    border-radius: 2px;
+}
+
+input[type="radio"]:checked + label:before, 
+input[type="radio"]:not(:checked) + label:before {
+    border-radius: 100%;
+}
+
+input[type="checkbox"]:checked + label:after, 
+input[type="checkbox"]:not(:checked) + label:after, 
+input[type="radio"]:checked + label:after, 
+input[type="radio"]:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked + label:after, 
+input[type="checkbox"]:not(:checked) + label:after {
+    left: rem(6px);
+    top: rem(6px);
+    width: rem(10px);
+    height: rem(5px);    
+    border-left: 3px solid #0f5a47;
+    border-bottom: 3px solid #0f5a47;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+input[type="radio"]:checked + label:after, 
+input[type="radio"]:not(:checked) + label:after {
+    left: 6px;
+    top: 6px;
+    width: rem(14px);
+    height: rem(14px);
+    border-radius: 100%;
+    background-color: #0f5a47;
+}
+
+input[type="checkbox"]:not(:checked) + label:after, 
+input[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after, 
+input[type="radio"]:checked + label:after {
+    opacity: 1;
+}
+
+.order__button-submit {
+  background: #0f5a47;
+  color: $white;
+}
+
+.order__button-reset {
+  font-family: AlegreyaSans;
+  font-size: 18px;  
+  color: #0f5a47;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: rem(30px);
+}

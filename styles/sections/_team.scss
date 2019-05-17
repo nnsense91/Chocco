@@ -1,5 +1,6 @@
 .team {    
     height: 100vh;
+    position: relative;
 }
 
 .container--team {
@@ -90,4 +91,11 @@
         border: rem(5px) solid transparent; /* Прозрачные границы */
         border-bottom: rem(6px) solid #0f5a47; /* Добавляем треугольник */
     }    
+}
+
+.team__raspberry {
+    position: absolute;
+    bottom: rem(-50px);
+    left: 0;
+    z-index: 2;
 }

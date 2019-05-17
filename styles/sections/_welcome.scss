@@ -58,7 +58,7 @@
     font-style: normal;    
 }
 
-.welcome__button {
+.button {
     margin-top: rem(33px);
     color: $green;
     font-family: AlegreyaSans;
@@ -120,7 +120,7 @@
 .aside {
     position: fixed;
     top: 33.5%;
-    right: rem(50px);
+    right: rem(50px);    
     z-index: 10;
 
     &__item {
