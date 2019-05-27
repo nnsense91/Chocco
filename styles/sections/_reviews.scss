@@ -1,25 +1,36 @@
 .reviews {
-    height: 100vh;
     position: relative;
 }
 
 .reviews__strawberry {
     position: absolute;
-    right: 0;
+    right: -30px;
+    top: -10px;
+    transform: scale(0.6);
 }
 
 .container--reviews {
     display: flex;
     align-items: center;
+    @include tablets {
+        // align-items: unset;
+    }
 }
 
 .reviews__title {
     text-align: center;
+    @include phones {
+        font-size: 30px;
+    }
 }
 
-.reviews__top-avatar {    
-    img {        
+.reviews__top-avatar {
+    text-align: center;   
+    img {
         width: 100%;
+        @include tablets {
+        width: 80%;
+        }
     }    
 }
 
@@ -31,11 +42,31 @@
     background-size: contain;
     width: 100%;
     padding: rem(50px) 0 rem(50px) rem(45.5px);
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 60%;
+    }
+    @include phones {
+        width: 90%;
+        padding: 0;
+    }
 }   
 
 .reviews__top-content {
     width: 50%;   
     margin-left: rem(20px);
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .reviews__top-title {
@@ -44,13 +75,19 @@
     font-size: 30px;
     font-weight: 500;
     font-style: normal;
-    color: #323232;    
+    color: #323232;
+    @include phones {
+        font-size: 20px;
+    }    
 }
 
 .reviews__top-text {
     margin-top: rem(24px);    
     @include desc;
     line-height: normal;
+    @include phones {
+        font-size: 14px;
+    }
 }
 
 .reviews__top-author {

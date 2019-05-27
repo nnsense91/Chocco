@@ -1,19 +1,28 @@
 .footer {
     width: 100%;
     height: rem(92px);    
-    background: #fff;    
+    background: #fff;
+    @include phones {
+        height: rem(150px);
+    }  
 }
 
 .container--footer {
     height: 100%;
     display: flex;
     justify-content: space-between;
+    @include phones {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 address {
     display: block;
     font-family: AlegreyaSans;
-    font-size: rem(21px);    
+    font-size: 21px;    
     line-height: 1.14;   
     color: #010101;
     font-style: normal;
@@ -28,25 +37,32 @@ address {
 .footer__phone {
     margin-top: rem(5px);
     font-family: AlegreyaSans;
-    font-size: rem(21px);
+    font-size: 21px;
     color: #0f5a47;
     position: relative;
     padding-left: rem(20px);
     &::after {
         content: '';
-        width: rem(12px);
-        height: rem(12px);
+        width: 12px;
+        height: 12px;
         background-image: url(../img/contacts/phone.png);
         background-repeat: no-repeat;
         position: absolute;
         left: 0;
         top: rem(7px);
+        @include phones {
+            left: rem(70px);
+            bottom: 0;
+        }
     }
 }
 
 .footer__social-list {
     display: flex;    
     align-items: center;
+    @include phones {
+        margin-top: rem(10px);
+    }
 }
 
 .footer__social-item {
@@ -57,8 +73,8 @@ address {
 }
 
 .footer__social-ico {
-    width: rem(20px);
-    height: rem(20px);
+    width: 20px;
+    height: 20px;
     fill: #b2b2b2;
     cursor: pointer;
 

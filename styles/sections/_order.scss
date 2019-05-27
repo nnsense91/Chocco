@@ -1,5 +1,4 @@
 .order {
-  height: 100vh;
   background-image: url(../img/order/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,18 +10,30 @@
   position: absolute;
   left: rem(20px);
   bottom: 25%;
+  @include tablets {
+    display: none;
+  }
 }
 
 .order__leaf {
   position: absolute;
   right: 0;
   bottom: 25%;
+  @include tablets {
+    display: none;
+  }
 }
 
 .order__leafs {
   position: absolute;
   right: 0;
   top: rem(-130px);
+
+  @include phones {
+    transform: scale(0.3);
+    right: rem(-95px);
+    top: rem(-180px);
+  }
 }
 
 .container--order {
@@ -45,6 +56,9 @@ textarea {
 .order__title {
   text-align: center;
   color: #0f5a47;
+  @include phones {
+    font-size: 30px;
+  }
 }
 
 .order__label {
@@ -76,10 +90,18 @@ textarea {
   justify-content: space-between;
   width: 100%;
   margin-top: rem(28px);
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .order__content {
   width: 49%;
+  @include phones {
+    width: 99%;
+  }
 }
 
 .order__row {
@@ -89,7 +111,11 @@ textarea {
 
 .order__comment {
   @include inputStyle;
-  max-height: rem(180px);  
+  max-height: rem(180px);
+  resize: none;
+  @include phones {
+    max-height: rem(100px);
+  }
 }
 
 .order__interface {
@@ -167,8 +193,8 @@ input[type="checkbox"]:not(:checked) + label:after {
 
 input[type="radio"]:checked + label:after, 
 input[type="radio"]:not(:checked) + label:after {
-    left: 6px;
-    top: 6px;
+    left: rem(6px);
+    top: rem(6px);
     width: rem(14px);
     height: rem(14px);
     border-radius: 100%;
@@ -198,4 +224,11 @@ input[type="radio"]:checked + label:after {
   background-color: transparent;
   cursor: pointer;
   margin-left: rem(30px);
+}
+
+.order__label-recall {
+  @include phones {
+    width: 50%;
+    margin-left: 25%;    
+  }
 }

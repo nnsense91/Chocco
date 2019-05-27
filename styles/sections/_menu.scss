@@ -1,5 +1,4 @@
 .menu {
-  height: 100vh;
   display: flex;
   background-image: url(../img/menu/menu.jpg);
   background-size: cover;
@@ -12,6 +11,14 @@
   color: $white;
   padding-top: rem(104px);
   padding-left: rem(80px);
+  @include phones {
+    font-size: 40px;
+    padding-left: 0;
+    padding-left: 25%;
+  }
+  @include phones {
+    font-size: 30px;
+  }
 }
 
 .menu__content {
@@ -25,7 +32,13 @@
     .menu__item{
       display: flex;
       justify-content: flex-end;
+      @include phones {
+      width: 33.33%;
+      }
     }
+  }
+  @include phones {
+    width: 50%;
   }
 }
 
@@ -36,7 +49,12 @@
   font-size: rem(48px);
   font-weight: 500;  
   color: $white;
-  padding-bottom: rem(40px);  
+  padding-bottom: rem(40px);
+
+  @include phones {
+    font-size: 20px;
+  }
+
 }
 
 .menu__item-desc {  
@@ -53,9 +71,12 @@
   display: flex;
   justify-content: center;
   padding-bottom: rem(40px);
-  width: rem(100px);
+  // width: rem(100px);
   background-size: cover;
   background-repeat: no-repeat;
+  @include phones {
+    width: 100%;
+  }
 }
 
 .menu__item-milk {
@@ -75,5 +96,7 @@
     padding: rem(55px);
     position: relative;    
     background-color: rgba(0,0,0,.7);
+
+    @include phones {}
   }
 }

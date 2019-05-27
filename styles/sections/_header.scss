@@ -20,6 +20,10 @@
     font-style: normal;
     font-stretch: normal;
     margin-left: rem(-15px);
+
+    @include tablets {
+        display: none;
+    }
 }
 
 .sidebar__item {
@@ -33,7 +37,7 @@
 .header__logo {
     font-family: "MuseoSansCyrl";
     text-transform: uppercase;
-    font-size: rem(24px);
+    font-size: 24px;
     line-height: 0.88;
 }
 
@@ -53,5 +57,44 @@
         position: absolute;
         left: rem(-18px);
         top: rem(8px);
+    }
+
+
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.header__burger-menu {
+    width: rem(24px);
+    height: rem(24px);
+    position: relative;
+    span {
+        position: absolute;
+        top: 50%;
+        width: rem(24px);
+        height: rem(4px);
+        background-color: #fff;
+        &::before {
+            content: '';
+            position: absolute;
+            width: rem(24px);
+            height: rem(4px);
+            background-color: #fff;
+            transform: translateY(8px);
+        }
+        &::after {
+            content: '';
+            position: absolute;            
+            width: rem(24px);
+            height: rem(4px);
+            background-color: #fff;
+            transform: translateY(-8px);
+        }
+    }
+    display: none;
+    @include tablets {
+        display: block;
     }
 }

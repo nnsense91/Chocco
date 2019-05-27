@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1100, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="./styles/layout/normalize.css">
@@ -44,7 +44,7 @@
                 </li>
             </ul>
         </aside>
-        <section class="welcome">
+        <section class="welcome section">
             <img src="./img/welcome/leaf-and-fruit.png" alt="ягоды" class="welcome__fruit-pic">
             <header class="header">
                 <div class="container">
@@ -80,11 +80,15 @@
                         <div class="header__phone">
                             <a href="tel:+78009039090" class="href">8 800 903 90 90</a>
                         </div>
+                        <a href ="#" class="header__burger-menu">
+                            <span></span>
+                        </a>
                     </div>
                 </div>
             </header>
             <div class="container container--welcome">
                 <div class="welcome__main-content">
+                    <img src="./img/welcome/choccos.png" alt="батончики" class="welcome__main-pic">
                     <div class="welcome__main-text">
                         <h1 class="welcome__title">
                             натуральные шоколадные батончики
@@ -115,12 +119,11 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <img src="./img/welcome/choccos.png" alt="батончики" class="welcome__main-pic">
+                    </div>                    
                 </div>
             </div>
         </section>
-        <section class="why">
+        <section class="why section">
             <img src="./img/why/raspberry.png" alt="малина" class="why__raspberry">
             <div class="container container--why">
                 <div class="why__content">
@@ -180,7 +183,7 @@
             </div>
         </section>
 
-        <section class="team">
+        <section class="team section">
             <img class="team__raspberry" src="./img/team/raspberry.png" alt="raspberry">
             <div class="container container--team">
                 <div class="team__content">
@@ -245,7 +248,7 @@
             </div>
         </section>
         
-        <section class="menu">
+        <section class="menu section">
 
             <div class="menu__title-block">
                 <h2 class="menu__title">
@@ -255,7 +258,7 @@
 
             <div class="menu__content">
                 <ul class="menu__list">
-                    <li class="menu__item menu__item--active">
+                    <li class="menu__item">
                         <div class="menu__subtitle-block menu__item-milk">
                             <h3 class="menu__subtitle">
                                 Батончики с молоком
@@ -293,7 +296,7 @@
 
         </section>
 
-        <section class="reviews">
+        <section class="reviews section">
             <img src="./img/reviews/Strawberry.png" alt="клубника" class="reviews__strawberry">
             <div class="container container--reviews">
                 <div class="reviews__content">
@@ -336,7 +339,7 @@
             </div>
         </section>
 
-        <section class="order">
+        <section class="order section">
             <img src="./img/order/berry.png" alt="berry" class="order__berry">
             <img src="./img/order/leaf.png" alt="leaf" class="order__leaf">
             <img src="./img/order/leafs2.png" alt="leafs" class="order__leafs">
@@ -378,7 +381,7 @@
                         <div class="order__content">
                             <div class="order__row">
                                 <label class="order__label">Комментарий
-                                    <textarea name="" id="" cols="30" rows="10" class="order__comment"></textarea>
+                                    <textarea name="comments" id="comments" cols="30" rows="10" class="order__comment"></textarea>
                                 </label>
                             </div>
                             <div class="order__interface">
@@ -404,7 +407,7 @@
             </div>
         </section>
 
-        <section class="contacts">         
+        <section class="contacts section">  
             <footer class="footer">
                 <div class="container container--footer">
                     <div class="footer__content">
