@@ -6,21 +6,38 @@
     display: flex;
     position: relative;
     align-items: center;
+
+    @include tablets {
+        justify-content: center;
+    }
 }
 
 .slider__item {
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .slider__item-title {
-    font-size: 36px;
+    font-size: rem(36px);
+
+    @include phones {
+        font-size: rem(30px);
+    }
 }
 
 .slider__item-subtitle {
     margin-top: rem(40px);
-    font-size: 24px;
+    font-size: rem(24px);
+
+    @include tablets {
+        width: 100%;
+    }
 }
 
 .slider__item-desc {
@@ -31,16 +48,37 @@
 .slider__button {
     background-color: $green;
     color: #fff;
+    @include phones {
+    font-size: 14px;
+    }
 }
 
 .slider__img-wrap {
     width: 45%;
+
+    @include tablets {
+        width: 60%;
+    }
+}
+
+.slider__img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .slider__content-wrap {
     display: flex;
     flex-wrap: wrap;
     width: 45%;
+
+    @include tablets {
+        width: 60%;
+        text-align: center;
+    }
+
+    @include phones {
+        width: 80%;
+    }
 }
 
 .slider__item-calor {
@@ -48,14 +86,17 @@
     width: 35%;
     .calorie {
         font-family: AlegreyaSans;
-        font-size: 18px;
+        font-size: rem(18px);
         color: #333333;
     }
     .calorie__value {
         font-family: AlegreyaSans;
-        font-size: 18px;
+        font-size: rem(18px);
         font-weight: bold;        
         color: #333333;
+    }
+    @include tablets {
+        width: 50%;
     }
 }
 
@@ -64,14 +105,18 @@
     width: 35%;
     .weight {
         font-family: AlegreyaSans;
-        font-size: 18px;
+        font-size: rem(18px);
         color: #333333;
     }
     .weight__value {
         font-family: AlegreyaSans;
-        font-size: 18px;
+        font-size: rem(18px);
         font-weight: bold;        
         color: #333333;
+    }
+
+    @include tablets {
+        width: 50%;
     }
 }
 
@@ -79,7 +124,7 @@
     display: flex;
     align-items: flex-end;
     font-family: AlegreyaSans;
-    font-size: 60px;
+    font-size: rem(60px);
     font-weight: 300;    
     color: #0d0d0d;
     span {
@@ -89,10 +134,18 @@
 
 .slider__item-price {
     width: 35%;
+    @include tablets {
+        width: 50%;
+        display: flex;
+        justify-content: center;        
+    }
 }
 
 .slider__item-btn {
     width: 65%;
+    @include tablets {
+        width: 50%;
+    }
 }
 
 .slider {
@@ -115,16 +168,37 @@
     border-top: 3px solid transparent;
     border-bottom: 0.1875rem solid #0d0d0d;
     border-radius: 0.3125rem;
+
+    @include tablets {
+        top: 35%;
+    }
+    @include phones {
+        top: 15%;
+    }
 }
 
 .slider__arrow--left {
     left: -3.75rem;    
     transform: rotate(45deg) translateY(-50%);
     border-left: 0.1875rem solid #0d0d0d;
+
+    @include tablets {
+        left: 0;
+    }
+    @include phones {
+        left: 10%;
+    }
 }
 
 .slider__arrow--right {
     right: -3.75rem;    
     transform: rotate(-45deg) translateY(-50%);
     border-right: 0.1875rem solid #0d0d0d;
+
+    @include tablets {
+        right: 0;
+    }
+    @include phones {
+        right: 10%;
+    }
 }
