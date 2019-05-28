@@ -1,0 +1,130 @@
+.product {
+    background-color:#f8faf9;
+}
+
+.container--product {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.slider__item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__item-title {
+    font-size: 36px;
+}
+
+.slider__item-subtitle {
+    margin-top: rem(40px);
+    font-size: 24px;
+}
+
+.slider__item-desc {
+    margin-top: rem(30px);
+    @include desc;
+}
+
+.slider__button {
+    background-color: $green;
+    color: #fff;
+}
+
+.slider__img-wrap {
+    width: 45%;
+}
+
+.slider__content-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+}
+
+.slider__item-calor {
+    margin-top: rem(50px);
+    width: 35%;
+    .calorie {
+        font-family: AlegreyaSans;
+        font-size: 18px;
+        color: #333333;
+    }
+    .calorie__value {
+        font-family: AlegreyaSans;
+        font-size: 18px;
+        font-weight: bold;        
+        color: #333333;
+    }
+}
+
+.slider__item-weight {
+    margin-top: rem(50px);
+    width: 35%;
+    .weight {
+        font-family: AlegreyaSans;
+        font-size: 18px;
+        color: #333333;
+    }
+    .weight__value {
+        font-family: AlegreyaSans;
+        font-size: 18px;
+        font-weight: bold;        
+        color: #333333;
+    }
+}
+
+.slider__item-price {
+    display: flex;
+    align-items: flex-end;
+    font-family: AlegreyaSans;
+    font-size: 60px;
+    font-weight: 300;    
+    color: #0d0d0d;
+    span {
+        display: block;
+    }
+}
+
+.slider__item-price {
+    width: 35%;
+}
+
+.slider__item-btn {
+    width: 65%;
+}
+
+.slider {
+    width: 100%;
+    position: relative;
+    left: 0;
+    transition: left 0.5s;
+}
+
+.slider__wrap {
+    overflow: hidden;    
+}
+
+.slider__arrow {
+    z-index: 30;
+    position: absolute;
+    width: 1.3125rem;
+    height: 1.3125rem;
+    top: 50%;
+    border-top: 3px solid transparent;
+    border-bottom: 0.1875rem solid #0d0d0d;
+    border-radius: 0.3125rem;
+}
+
+.slider__arrow--left {
+    left: -3.75rem;    
+    transform: rotate(45deg) translateY(-50%);
+    border-left: 0.1875rem solid #0d0d0d;
+}
+
+.slider__arrow--right {
+    right: -3.75rem;    
+    transform: rotate(-45deg) translateY(-50%);
+    border-right: 0.1875rem solid #0d0d0d;
+}

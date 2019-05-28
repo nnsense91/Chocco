@@ -55,34 +55,36 @@
                         <nav class="header__sidebar">
                             <ul class="sidebar__list">
                                 <li class="sidebar__item">
-                                    <a href="#" class="sidebar__link">О нас</a>
+                                    <a href="#why" class="sidebar__link">О нас</a>
                                 </li>
                                 <li class="sidebar__item">
-                                    <a href="#" class="sidebar__link">Батончики</a>
+                                    <a href="#product" class="sidebar__link">Батончики</a>
                                 </li>
                                 <li class="sidebar__item">
-                                    <a href="#" class="sidebar__link">Команда</a>
+                                    <a href="#team" class="sidebar__link">Команда</a>
                                 </li>
                                 <li class="sidebar__item">
-                                    <a href="#" class="sidebar__link">Меню</a>
+                                    <a href="#menu" class="sidebar__link">Меню</a>
                                 </li>
                                 <li class="sidebar__item">
-                                    <a href="#" class="sidebar__link">Отзывы</a>
+                                    <a href="#reviews" class="sidebar__link">Отзывы</a>
                                 </li>
                                 <li class="sidebar__item">
                                     <a href="#" class="sidebar__link">Как мы работаем</a>
                                 </li>
                                 <li class="sidebar__item">
-                                    <a href="#" class="sidebar__link">Контакты</a>
+                                    <a href="#contacts" class="sidebar__link">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
                         <div class="header__phone">
                             <a href="tel:+78009039090" class="href">8 800 903 90 90</a>
                         </div>
-                        <a href ="#" class="header__burger-menu">
-                            <span></span>
-                        </a>
+                        <div class="burger">
+                            <div class="burger__content">
+                                <div class="burger__line"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -123,7 +125,7 @@
                 </div>
             </div>
         </section>
-        <section class="why section">
+        <section class="why section" id="why">
             <img src="./img/why/raspberry.png" alt="малина" class="why__raspberry">
             <div class="container container--why">
                 <div class="why__content">
@@ -140,7 +142,7 @@
                         <li class="why__advantages-item">
                             <div class="why__advantages-pic">
                                 <svg class="why__advantages-svg">
-                                    <use xlink:href="./img/svg/why.svg#man"></use>                                        
+                                    <use xlink:href="./img/svg/why.svg#man"></use>
                                 </svg>
                             </div>
                             <h3 class="why__advantages-title">
@@ -154,7 +156,7 @@
                         <li class="why__advantages-item">
                             <div class="why__advantages-pic">
                                 <svg class="why__advantages-svg">
-                                    <use xlink:href="./img/svg/why.svg#smile"></use>                                        
+                                    <use xlink:href="./img/svg/why.svg#smile"></use>
                                 </svg>
                             </div>
                             <h3 class="why__advantages-title">
@@ -168,7 +170,7 @@
                         <li class="why__advantages-item">
                             <div class="why__advantages-pic">
                                 <svg class="why__advantages-svg">
-                                    <use xlink:href="./img/svg/why.svg#muscle"></use>                                        
+                                    <use xlink:href="./img/svg/why.svg#muscle"></use>
                                 </svg>
                             </div>
                             <h3 class="why__advantages-title">
@@ -183,7 +185,98 @@
             </div>
         </section>
 
-        <section class="team section">
+        <section class="product section" id="product">
+            <div class="container container--product">
+                <a class="slider__arrow slider__arrow--left" id="left" href="#"></a>
+                    <div class="slider__wrap">
+                        <ul class="slider">
+                            <li class="slider__item">
+                                <div class="slider__img-wrap">
+                                    <img src="./img/product/choccos.png" alt="" class="slider__img">
+                                </div>
+                                <div class="slider__content-wrap">
+                                    <h2 class="slider__item-title">
+                                        батончик "морские водоросли"
+                                    </h2>
+                                    <h3 class="slider__item-subtitle">
+                                        Состав:
+                                    </h3>
+                                    <div class="slider__item-desc">
+                                        Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                    </div>
+                                    <div class="slider__item-calor">
+                                        <div class="calorie">
+                                            Калорийность
+                                        </div>
+                                        <div class="calorie__value">
+                                            120 ккал
+                                        </div>
+                                    </div>
+                                    <div class="slider__item-weight">
+                                        <div class="weight">
+                                            Вес
+                                        </div>
+                                        <div class="weight__value">
+                                            98 грамм
+                                        </div>
+                                    </div>
+                                    <div class="slider__item-price">
+                                        <span>140&#8381;</span>
+                                    </div>
+                                    <div class="slider__item-btn">
+                                        <button class="button slider__button">
+                                            заказать                                            
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>                            
+                            <!-- <li class="slider__item">
+                                <div class="slider__img-wrap">
+                                    <img src="./img/product/choccos.png" alt="" class="slider__img">
+                                </div>
+                                <div class="slider__content-wrap">
+                                    <h2 class="slider__item-title">
+                                        батончик морские водоросли
+                                    </h2>
+                                    <h3 class="slider__item-subtitle">
+                                        Состав:
+                                    </h3>
+                                    <div class="slider__item-desc">
+                                        Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                    </div>
+                                    <div class="slider__item-calor">
+                                        <div class="calorie">
+                                            Калорийность
+                                        </div>
+                                        <div class="calorie__value">
+                                            120 ккал
+                                        </div>
+                                    </div>
+                                    <div class="slider__item-weight">
+                                        <div class="weight">
+                                            Вес
+                                        </div>
+                                        <div class="weight__value">
+                                            98 грамм
+                                        </div>
+                                    </div>
+                                    <div class="slider__item-price">
+                                        140р
+                                    </div>
+                                    <div class="slider__item-btn">
+                                        <button class="button slider__button">
+                                            заказать                                            
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>                             -->
+                        </ul>
+                    </div>
+                <a class="slider__arrow slider__arrow--right" id="right" href="#"></a>
+            </div>
+        </section>
+
+        <section class="team section" id="team">
             <img class="team__raspberry" src="./img/team/raspberry.png" alt="raspberry">
             <div class="container container--team">
                 <div class="team__content">
@@ -248,7 +341,7 @@
             </div>
         </section>
         
-        <section class="menu section">
+        <section class="menu section" id="menu">
 
             <div class="menu__title-block">
                 <h2 class="menu__title">
@@ -296,7 +389,7 @@
 
         </section>
 
-        <section class="reviews section">
+        <section class="reviews section" id="reviews">
             <img src="./img/reviews/Strawberry.png" alt="клубника" class="reviews__strawberry">
             <div class="container container--reviews">
                 <div class="reviews__content">
@@ -407,7 +500,7 @@
             </div>
         </section>
 
-        <section class="contacts section">  
+        <section class="contacts section" id="contacts">  
             <footer class="footer">
                 <div class="container container--footer">
                     <div class="footer__content">
@@ -449,6 +542,7 @@
         </section>
 
     </div>
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>
