@@ -122,20 +122,30 @@
         right: rem(60px); top: rem(7px); /* Положение треугольника */
         border: rem(5px) solid transparent; /* Прозрачные границы */
         border-top: rem(6px) solid #0f5a47; /* Добавляем треугольник */        
-    @include phones {
-        right: rem(50px);
-    }
+
+        @include tablets {
+            right: rem(100px);
+        }
+        @include phones {
+            right: rem(50px);
+        }        
     }    
 }
 
+.team__post--active ~ .team__desc {
+    max-height: 200px;
+    transition: 0.2s;
+}
+
 .team__desc {
-    height: 0;
+    max-height: 0;
     overflow: hidden;
     margin-top: rem(4px);
     font-family: AlegreyaSans;
     font-size: rem(18px);
     font-weight: 300;    
     color: #666666;
+    transition: 0.2s;
 }
 
 .team__post--active {
@@ -145,6 +155,9 @@
         right: rem(60px); top: rem(2px); /* Положение треугольника */
         border: rem(5px) solid transparent; /* Прозрачные границы */
         border-bottom: rem(6px) solid #0f5a47; /* Добавляем треугольник */
+        @include tablets {
+            right: rem(100px);
+        }
         @include phones {
             right: rem(50px);
         }

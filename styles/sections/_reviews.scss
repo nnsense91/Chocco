@@ -6,7 +6,14 @@
     position: absolute;
     right: -30px;
     top: -10px;
+    @include tablets{ 
     transform: scale(0.6);
+    }
+    @include phones{ 
+    transform: scale(0.4);
+    right: -55px;
+    top: -25px;
+    }
 }
 
 .container--reviews {
@@ -48,6 +55,7 @@
         align-items: center;
         margin: 0 auto;
         width: 60%;
+        background-color: #f8faf9;
     }
     @include phones {
         width: 90%;

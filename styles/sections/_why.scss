@@ -88,7 +88,7 @@
             left: -25%;
             top: 20%;
 
-            @include phones {
+            @include tablets {
                 display: none;
             }
         }

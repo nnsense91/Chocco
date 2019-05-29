@@ -29,16 +29,21 @@
   .menu__list {
     display: flex;
     height: 100%;
-    .menu__item{
+    .menu__item {
       display: flex;
       justify-content: flex-end;
-      @include phones {
-      width: 33.33%;
-      }
+      // @include phones {
+      //   width: 16%;
+      // }
+    }
+    @include phones {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
     }
   }
   @include phones {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -71,11 +76,11 @@
   display: flex;
   justify-content: center;
   padding-bottom: rem(40px);
-  // width: rem(100px);
+  width: rem(100px);
   background-size: cover;
   background-repeat: no-repeat;
   @include phones {
-    width: 100%;
+    width: rem(70px);
   }
 }
 
@@ -89,14 +94,18 @@
   background-image: url(../img/menu/berries.jpg);
 }
 
-.menu__item--active {
-  .menu__item-desc {
-    width: 50%;
+.menu__item--active > .menu__item-desc { 
+    width: 40vw;
     overflow: initial;
     padding: rem(55px);
     position: relative;    
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0,0,0,.8);
 
-    @include phones {}
+    @include tablets {
+      width: 100%;
+    }
+    @include phones {
+      font-size: rem(12px);
+      padding: rem(15px);
   }
 }
