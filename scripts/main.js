@@ -45,3 +45,38 @@ menuAcco.addEventListener('click', function (e) {
         currentProduct.classList.toggle('menu__item--active');
     }
 })
+
+//product-slider
+
+const left = document.querySelector('#left');
+const right = document.querySelector('#right');
+const slider = document.querySelector('#slider');
+const item = document.querySelector('.slider__item');
+const numberOfItems = (document.getElementsByClassName('slider__item')).length;
+const computedSlider = getComputedStyle(slider);
+const computedItemWidth = (getComputedStyle(item).width);
+
+
+right.addEventListener('click', function(e){
+    
+    e.preventDefault();
+    let currentRight = parseInt(computedSlider.right);
+    let currentItemWidth = parseInt(computedItemWidth);
+    if (!currentRight) {
+        currentRight = 0;
+        slider.style.right = currentRight + (currentItemWidth) + 'px';        
+    }
+})
+
+left.addEventListener('click', function(e){
+    
+    e.preventDefault();
+    let currentRight = parseInt(computedSlider.right);
+    let currentItemWidth = parseInt(computedItemWidth);
+    
+    if (currentRight > 0) {
+    slider.style.right = currentRight - currentItemWidth + 'px';    
+    }    
+})
+
+

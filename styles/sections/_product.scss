@@ -15,6 +15,7 @@
 .slider__item {
     width: 100%;
     display: flex;
+    flex-shrink: 0;
     justify-content: space-between;
 
     @include tablets {
@@ -150,9 +151,10 @@
 
 .slider {
     width: 100%;
-    position: relative;
-    left: 0;
-    transition: left 0.5s;
+    position: relative;    
+    display: flex;
+    right: 0;
+    transition: 0.2s;
 }
 
 .slider__wrap {
@@ -161,13 +163,7 @@
 
 .slider__arrow {
     z-index: 30;
-    position: absolute;
-    width: 1.3125rem;
-    height: 1.3125rem;
-    top: 50%;
-    border-top: 3px solid transparent;
-    border-bottom: 0.1875rem solid #0d0d0d;
-    border-radius: 0.3125rem;
+    position: absolute;    
 
     @include tablets {
         top: 35%;
@@ -178,9 +174,7 @@
 }
 
 .slider__arrow--left {
-    left: -3.75rem;    
-    transform: rotate(45deg) translateY(-50%);
-    border-left: 0.1875rem solid #0d0d0d;
+    left: -3.75rem;
 
     @include tablets {
         left: 0;
@@ -191,9 +185,8 @@
 }
 
 .slider__arrow--right {
-    right: -3.75rem;    
-    transform: rotate(-45deg) translateY(-50%);
-    border-right: 0.1875rem solid #0d0d0d;
+    right: -3.75rem;
+    transform: rotate(180deg);
 
     @include tablets {
         right: 0;

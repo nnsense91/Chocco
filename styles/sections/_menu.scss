@@ -31,10 +31,7 @@
     height: 100%;
     .menu__item {
       display: flex;
-      justify-content: flex-end;
-      // @include phones {
-      //   width: 16%;
-      // }
+      justify-content: flex-end;      
     }
     @include phones {
       width: 100%;
