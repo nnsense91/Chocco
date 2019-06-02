@@ -1,177 +1,179 @@
 .team {
-    position: relative;
+  position: relative;
 }
 
 .container--team {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    @include tablets {
-        align-items: unset;
-    }
+  @include tablets {
+    align-items: unset;
+  }
 }
 
 .team__content {
-    @include tablets {
-        width: 70%;
-    }
-    @include phones {
-        width: 100%;
-    }
+  @include tablets {
+    width: 70%;
+  }
+  @include phones {
+    width: 100%;
+  }
 }
 
 .team__title {
-    text-align: center;
-    @include tablets {
-        padding-top: rem(60px);
-    }
-    @include phones {
-        padding-top: 0;
-        font-size: 30px;
-    }
+  text-align: center;
+  @include tablets {
+    padding-top: rem(60px);
+  }
+  @include phones {
+    padding-top: 0;
+    font-size: 30px;
+  }
 }
 
 .team__list {
-    margin-top: rem(70px);
-    display: flex;
+  margin-top: rem(70px);
+  display: flex;
 
-    @include tablets {
-        width: 100%;
-        flex-wrap: wrap;
-    }
+  @include tablets {
+    width: 100%;
+    flex-wrap: wrap;
+  }
 
-    @include phones {
-        margin-top: 0;
-    }
+  @include phones {
+    margin-top: 0;
+  }
 }
 
 .team__item {
-    display: flex;
-    flex-direction: column;
-    width: 23.6%;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  width: 23.6%;
+  flex-wrap: wrap;
 
-    @include tablets {
-        width: 50%;
-    }
-    @include phones {
-        align-items: center;
-    }
+  @include tablets {
+    width: 50%;
+  }
+  @include phones {
+    align-items: center;
+  }
 }
 
 .team__avatar {
-    height: 288px;
-    width: 222px;
-    background-repeat: no-repeat;
-    background-size: contain;
+  height: 288px;
+  width: 222px;
+  background-repeat: no-repeat;
+  background-size: contain;
 
-    @include phones {
-        width: rem(159.84px);
-        height: rem(207.36px);
-    }
+  @include phones {
+    width: rem(159.84px);
+    height: rem(207.36px);
+  }
 }
 
 .team__item {
-    text-align: center;
-    margin-left: rem(16px);
-    &:first-child {
-        margin-left: 0;
-    }
+  text-align: center;
+  margin-left: rem(16px);
+  &:first-child {
+    margin-left: 0;
+  }
 
-    &:nth-child(even){
-        margin-top: rem(50px);
-    }
+  &:nth-child(even) {
+    margin-top: rem(50px);
+  }
 
-    @include tablets {
-        margin-left: 0;
-        &:nth-child(even){
-            margin-top: rem(20px);
-        }
-        margin-top: rem(20px);
+  @include tablets {
+    margin-left: 0;
+    &:nth-child(even) {
+      margin-top: rem(20px);
     }
+    margin-top: rem(20px);
+  }
 }
 
 .team__name {
-    display: block;
-    margin-top: rem(25px);
-    font-family: AlegreyaSans;
-    font-size: rem(21px);
-    font-weight: 500;   
-    color: #323232;
-    text-align: center;
+  display: block;
+  margin-top: rem(25px);
+  font-family: AlegreyaSans;
+  font-size: rem(21px);
+  font-weight: 500;
+  color: #323232;
+  text-align: center;
 
-    @include phones {
-        margin-top: rem(5px);
-    }
+  @include phones {
+    margin-top: rem(5px);
+  }
 }
 
 .team__post {
-    position: relative;
-    display: block;
-    margin-top: rem(8px);
-    font-family: AlegreyaSans;
-    font-size: rem(18px);
-    font-weight: normal;    
-    color: #281e1e;
-    cursor: pointer;
+  position: relative;
+  display: block;
+  margin-top: rem(8px);
+  font-family: AlegreyaSans;
+  font-size: rem(18px);
+  font-weight: normal;
+  color: #281e1e;
+  cursor: pointer;
 
-    &::after {
-        content: ''; 
-        position: absolute; /* Абсолютное позиционирование */
-        right: rem(60px); top: rem(7px); /* Положение треугольника */
-        border: rem(5px) solid transparent; /* Прозрачные границы */
-        border-top: rem(6px) solid #0f5a47; /* Добавляем треугольник */        
+  &::after {
+    content: "";
+    position: absolute; /* Абсолютное позиционирование */
+    right: rem(60px);
+    top: rem(7px); /* Положение треугольника */
+    border: rem(5px) solid transparent; /* Прозрачные границы */
+    border-top: rem(6px) solid #0f5a47; /* Добавляем треугольник */
 
-        @include tablets {
-            right: rem(100px);
-        }
-        @include phones {
-            right: rem(50px);
-        }        
-    }    
+    @include tablets {
+      right: rem(100px);
+    }
+    @include phones {
+      right: rem(50px);
+    }
+  }
 }
 
 .team__post--active ~ .team__desc {
-    max-height: 200px;
-    transition: 0.2s;
+  max-height: 200px;
+  transition: 0.2s;
 }
 
 .team__desc {
-    max-height: 0;
-    overflow: hidden;
-    margin-top: rem(4px);
-    font-family: AlegreyaSans;
-    font-size: rem(18px);
-    font-weight: 300;    
-    color: #666666;
-    transition: 0.2s;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: rem(4px);
+  font-family: AlegreyaSans;
+  font-size: rem(18px);
+  font-weight: 300;
+  color: #666666;
+  transition: 0.2s;
 }
 
 .team__post--active {
-    &::after {
-        content: ''; 
-        position: absolute; /* Абсолютное позиционирование */
-        right: rem(60px); top: rem(2px); /* Положение треугольника */
-        border: rem(5px) solid transparent; /* Прозрачные границы */
-        border-bottom: rem(6px) solid #0f5a47; /* Добавляем треугольник */
-        @include tablets {
-            right: rem(100px);
-        }
-        @include phones {
-            right: rem(50px);
-        }
-    }    
+  &::after {
+    content: "";
+    position: absolute; /* Абсолютное позиционирование */
+    right: rem(60px);
+    top: rem(2px); /* Положение треугольника */
+    border: rem(5px) solid transparent; /* Прозрачные границы */
+    border-bottom: rem(6px) solid #0f5a47; /* Добавляем треугольник */
+    @include tablets {
+      right: rem(100px);
+    }
+    @include phones {
+      right: rem(50px);
+    }
+  }
 }
 
 .team__raspberry {
-    position: absolute;
-    bottom: rem(-50px);
-    left: rem(-70px);
-    z-index: 2;
+  position: absolute;
+  bottom: rem(-50px);
+  left: rem(-70px);
+  z-index: 2;
 
-    @include phones {
-        transform: scale(0.5);
-        bottom: rem(-60px);
-    }
+  @include phones {
+    transform: scale(0.5);
+    bottom: rem(-60px);
+  }
 }
