@@ -46,36 +46,6 @@ menuAcco.addEventListener("click", function(e) {
   }
 });
 
-//product-slider
-
-// const left = document.querySelector("#left");
-// const right = document.querySelector("#right");
-// const slider = document.querySelector("#slider");
-// const item = document.querySelector(".slider__item");
-// const numberOfItems = document.getElementsByClassName("slider__item").length;
-// const computedSlider = getComputedStyle(slider);
-// const computedItemWidth = getComputedStyle(item).width;
-
-// right.addEventListener("click", function(e) {
-//   e.preventDefault();
-//   let currentRight = parseInt(computedSlider.right);
-//   let currentItemWidth = parseInt(computedItemWidth);
-//   if (!currentRight) {
-//     currentRight = 0;
-//     slider.style.right = currentRight + currentItemWidth + "px";
-//   }
-// });
-
-// left.addEventListener("click", function(e) {
-//   e.preventDefault();
-//   let currentRight = parseInt(computedSlider.right);
-//   let currentItemWidth = parseInt(computedItemWidth);
-
-//   if (currentRight > 0) {
-//     slider.style.right = currentRight - currentItemWidth + "px";
-//   }
-// });
-
 //slider jquery carousel
 
 const owl = $(".owl-carousel");
@@ -89,4 +59,28 @@ $(".slider__arrow--right").click(function(e) {
 $(".slider__arrow--left").click(function(e) {
   e.preventDefault();
   owl.trigger("prev.owl.carousel", [300]);
+});
+
+// Отправка формы
+const form = document.querySelector(".order__form");
+const submitButton = document.querySelector(".order__button-submit");
+const popup = document.querySelector(".popup");
+const popupClose = document.querySelector(".popup__button");
+
+form.onsubmit = function(e) {
+  e.preventDefault();
+};
+submitButton.addEventListener("click", function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  formData.append("to", "HD-74@yandex.ru");
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
+  xhr.send(formData);
+  xhr.addEventListener("load", function() {
+    const response = JSON.parse(xhr.response);
+    if (!response.status) {
+      popup.classList.add("popup--active");
+    }
+  });
 });

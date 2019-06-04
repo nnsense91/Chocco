@@ -449,14 +449,14 @@
                 <h2 class="order__title">
                     закажите доставку
                 </h2>
-                <form action="index.html" class="order__form">
+                <form class="order__form" id="form">
                     <div class="order__content">
                         <div class="order__row">
                             <label class="order__label order__label--half">Имя
-                                <input type="text" class="order__name">
+                                <input type="text" class="order__name" name="name">
                             </label>
                             <label class="order__label order__label--half">Телефон
-                                <input type="text" class="order__phone">
+                                <input type="text" class="order__phone" name="phone">
                             </label>
                         </div>
                         <div class="order__row">
@@ -484,7 +484,7 @@
                         <div class="order__row">
                             <label class="order__label">Комментарий
                                 <textarea name="comments" id="comments" cols="30" rows="10"
-                                    class="order__comment"></textarea>
+                                class="order__comment"></textarea>
                             </label>
                         </div>
                         <div class="order__interface">
@@ -503,11 +503,17 @@
                             <label for="check" class="order__label order__label-recall">
                                 <span>Не перезванивать</span>
                             </label>
-                            <button type="submit" class="order__button-submit button">заказать</button>
+                            <button type="submit" class="order__button-submit button" id="submit">заказать</button>
                             <button type="reset" class="order__button-reset">Очистить</button>
                         </div>
                     </div>
                 </form>
+                <div class="popup">
+                    <div class="popup__content">
+                        <button class="popup_button">Закрыть</button>
+                        <p class="popup__desc">Отправлено!</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -551,8 +557,8 @@
                 </div>
             </footer>
         </section>
-
     </div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./scripts/owl.carousel.min.js"></script>
     <script src="./scripts/main.js"></script>
