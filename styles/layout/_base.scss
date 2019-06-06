@@ -1,4 +1,5 @@
 // Breakpointns
+$littleDesktop: 950px;
 $tablets: 768px;
 $phones: 480px;
 
@@ -8,6 +9,12 @@ $phones: 480px;
         @content;
     }    
 }    
+
+@mixin littleDesktop {
+    @media screen and (max-width: $littleDesktop) {
+        @content;
+    }    
+}
 
 @mixin phones {
     @media screen and (max-width: $phones) {

@@ -1,6 +1,7 @@
 //burger-menu header
 const burger = document.querySelector(".burger");
 const navigation = document.querySelector(".header__sidebar");
+const link = document.getElementsByClassName("sidebar__link");
 
 function triggerMobileMenu() {
   burger.classList.toggle("burger--active");
@@ -12,19 +13,27 @@ burger.addEventListener("click", function() {
   triggerMobileMenu();
 });
 
+for (let i = 0; i < link.length; i++) {
+  link[i].addEventListener("click", function(e) {
+    burger.classList.remove("burger--active");
+    navigation.classList.remove("header__sidebar--active");
+    document.body.classList.remove("hidden");
+  });
+}
+
 //v-acco team-section
 const teamAcco = document.querySelector(".team__list");
-const teamTitle = document.getElementsByClassName("team__post");
+const teamTitle = document.getElementsByClassName("team__name");
 const teamDesc = document.getElementsByClassName("team__desc");
 
 teamAcco.addEventListener("click", function(e) {
-  if (e.target.classList.contains("team__post--active")) {
-    e.target.classList.remove("team__post--active");
-  } else if (e.target.classList.contains("team__post")) {
+  if (e.target.classList.contains("team__name--active")) {
+    e.target.classList.remove("team__name--active");
+  } else if (e.target.classList.contains("team__name")) {
     for (let i = 0; i < teamTitle.length; i++) {
-      teamTitle[i].classList.remove("team__post--active");
+      teamTitle[i].classList.remove("team__name--active");
     }
-    e.target.classList.toggle("team__post--active");
+    e.target.classList.toggle("team__name--active");
   }
 });
 
@@ -50,7 +59,8 @@ menuAcco.addEventListener("click", function(e) {
 
 const owl = $(".owl-carousel");
 owl.owlCarousel({
-  items: 1
+  items: 1,
+  loop: true
 });
 $(".slider__arrow--right").click(function(e) {
   e.preventDefault();
@@ -66,6 +76,7 @@ const form = document.querySelector(".order__form");
 const submitButton = document.querySelector(".order__button-submit");
 const popup = document.querySelector(".popup");
 const popupClose = document.querySelector(".popup__button");
+const popupText = document.querySelector(".popup__desc");
 
 form.onsubmit = function(e) {
   e.preventDefault();
@@ -79,8 +90,60 @@ submitButton.addEventListener("click", function(e) {
   xhr.send(formData);
   xhr.addEventListener("load", function() {
     const response = JSON.parse(xhr.response);
-    if (!response.status) {
+    if (response.status) {
       popup.classList.add("popup--active");
+    } else {
+      popup.classList.add("popup--active");
+      popupText.innerText = "Ошибка сервера";
     }
   });
+});
+
+popupClose.addEventListener("click", function(e) {
+  popup.classList.remove("popup--active");
+});
+
+//slideshow
+
+const item = document.getElementsByClassName("reviews__all-pic");
+const itemGirl1 = document.querySelector(".reviews__all-girl");
+const itemGirl2 = document.querySelector(".reviews__all-girl2");
+const itemGuy = document.querySelector(".reviews__all-guy");
+const topPic = document.querySelector(".reviews__top-img");
+const topTitle = document.querySelector(".reviews__top-title");
+const topReview = document.querySelector(".reviews__top-text");
+const topAuthor = document.querySelector(".reviews__top-author");
+
+itemGirl1.addEventListener("click", function(e) {
+  for (let i = 0; i < item.length; i++) {
+    item[i].classList.remove("reviews--active");
+  }
+  e.target.classList.add("reviews--active");
+  topPic.src = "./img/reviews/girl.jpg";
+  topTitle.innerText = "Лучший перекус";
+  topReview.innerText =
+    "Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно.";
+  topAuthor.innerText = "Алёна Хмельницкая";
+});
+itemGirl2.addEventListener("click", function(e) {
+  for (let i = 0; i < item.length; i++) {
+    item[i].classList.remove("reviews--active");
+  }
+  e.target.classList.add("reviews--active");
+  topPic.src = "./img/reviews/girl2.jpg";
+  topTitle.innerText = "Лучшие батончики премиум уровня";
+  topReview.innerText =
+    "Батончики понравились. На мой взгляд слегка завышена цена по сравнению с конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке. Ну и конечно же, кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но это скорее плюс, чем минус.";
+  topAuthor.innerText = "Мария Орлова";
+});
+itemGuy.addEventListener("click", function(e) {
+  for (let i = 0; i < item.length; i++) {
+    item[i].classList.remove("reviews--active");
+  }
+  e.target.classList.add("reviews--active");
+  topPic.src = "./img/reviews/guy.jpg";
+  topTitle.innerText = "Идеально подходят для спортсменов";
+  topReview.innerText =
+    "Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно.";
+  topAuthor.innerText = "Вадим Грачев";
 });

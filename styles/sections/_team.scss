@@ -33,6 +33,7 @@
 }
 
 .team__list {
+  width: 100%;
   margin-top: rem(70px);
   display: flex;
 
@@ -49,6 +50,7 @@
 .team__item {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 23.6%;
   flex-wrap: wrap;
 
@@ -61,10 +63,15 @@
 }
 
 .team__avatar {
-  height: 288px;
-  width: 222px;
+  height: rem(288px);
+  width: rem(222px);
   background-repeat: no-repeat;
   background-size: contain;
+
+  @include littleDesktop {
+    height: rem(230px);
+    width: rem(177.6px);
+  }
 
   @include phones {
     width: rem(159.84px);
@@ -93,6 +100,7 @@
 }
 
 .team__name {
+  position: relative;
   display: block;
   margin-top: rem(25px);
   font-family: AlegreyaSans;
@@ -100,6 +108,16 @@
   font-weight: 500;
   color: #323232;
   text-align: center;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute; /* Абсолютное позиционирование */
+    right: -12%;
+    top: 40%; /* Положение треугольника */
+    border: rem(5px) solid transparent; /* Прозрачные границы */
+    border-top: rem(6px) solid #0f5a47; /* Добавляем треугольник */
+  }
 
   @include phones {
     margin-top: rem(5px);
@@ -107,40 +125,19 @@
 }
 
 .team__post {
-  position: relative;
-  display: block;
   margin-top: rem(8px);
   font-family: AlegreyaSans;
   font-size: rem(18px);
   font-weight: normal;
   color: #281e1e;
-  cursor: pointer;
-
-  &::after {
-    content: "";
-    position: absolute; /* Абсолютное позиционирование */
-    right: rem(60px);
-    top: rem(7px); /* Положение треугольника */
-    border: rem(5px) solid transparent; /* Прозрачные границы */
-    border-top: rem(6px) solid #0f5a47; /* Добавляем треугольник */
-
-    @include tablets {
-      right: rem(100px);
-    }
-    @include phones {
-      right: rem(50px);
-    }
-  }
 }
 
-.team__post--active ~ .team__desc {
-  max-height: 200px;
+.team__name--active ~ .team__caption {
+  opacity: 1;
   transition: 0.2s;
 }
 
 .team__desc {
-  max-height: 0;
-  overflow: hidden;
   margin-top: rem(4px);
   font-family: AlegreyaSans;
   font-size: rem(18px);
@@ -149,20 +146,14 @@
   transition: 0.2s;
 }
 
-.team__post--active {
+.team__name--active {
   &::after {
     content: "";
     position: absolute; /* Абсолютное позиционирование */
-    right: rem(60px);
-    top: rem(2px); /* Положение треугольника */
+    right: -12%;
+    top: 20%;
     border: rem(5px) solid transparent; /* Прозрачные границы */
     border-bottom: rem(6px) solid #0f5a47; /* Добавляем треугольник */
-    @include tablets {
-      right: rem(100px);
-    }
-    @include phones {
-      right: rem(50px);
-    }
   }
 }
 
@@ -176,4 +167,10 @@
     transform: scale(0.5);
     bottom: rem(-60px);
   }
+}
+
+.team__caption {
+  margin-top: rem(10px);
+  min-height: 100px;
+  opacity: 0;
 }

@@ -42,6 +42,10 @@
     font-stretch: normal;
     margin-left: rem(-15px);    
 
+    @include littleDesktop {
+        font-size: rem(16px);    
+    }
+
     @include tablets {
         display: flex;
         flex-direction: column;
@@ -53,6 +57,10 @@
     margin-left: rem(27px);
     &:first-child {
         margin-left: 0;
+    }
+
+    @include littleDesktop {
+        margin-left: rem(10px);
     }
 
     @include tablets {
