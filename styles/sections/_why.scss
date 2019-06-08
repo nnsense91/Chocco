@@ -1,150 +1,150 @@
 .why {
-    margin: 0 auto;
-    background-image: url(../img/why/leaf.png);
-    background-repeat: no-repeat;
-    background-position: left center;
-    position: relative;    
+  margin: 0 auto;
+  background-image: url(../img/why/leaf.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  position: relative;
 }
 
 .why__title {
-    @include phones {
-        font-size: 30px;
-    }
+  @include phones {
+    font-size: 30px;
+  }
 }
 
 .why__raspberry {
-    position: absolute;
-    bottom: rem(-110px);
-    @include phones {
-        transform: scale(0.5);
-        left: rem(-70px);
-        bottom: (-130px);
-    }
+  position: absolute;
+  bottom: rem(-110px);
+  @include phones {
+    transform: scale(0.5);
+    left: rem(-70px);
+    bottom: (-130px);
+  }
 }
 
 .container--why {
-    display: flex;
-    align-items: center;
-    
-    @include tablets {
-        flex-direction: column;        
-    }
+  display: flex;
+  align-items: center;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .why__title-block {
-    width: 43.7%;
-    margin: 0 auto;
-    text-align: center;
-    @include tablets {
-        width: 60%;
-        margin-top: rem(75px);
-    }
-    @include phones {
-        width: 100%;        
-    }
+  width: 43.7%;
+  margin: 0 auto;
+  text-align: center;
+  @include tablets {
+    width: 60%;
+    // margin-top: rem(75px);
+  }
+  @include phones {
+    width: 100%;
+  }
 }
 
 .why__title-desc {
-    @include desc;
-    margin-top: 8px;
-    @include phones {
-    font-size: 14px;    
+  @include desc;
+  margin-top: 8px;
+  @include phones {
+    font-size: 14px;
     margin-top: 4px;
-    }
+  }
 }
 
 .why__advantages {
-    display: flex;
-    margin-top: rem(57px);
-    text-align: center;
+  display: flex;
+  margin-top: rem(57px);
+  text-align: center;
 
-    @include tablets {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 0;
-        margin-bottom: rem(75px);
-    }
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: rem(75px);
+  }
 }
 
 .why__advantages-item {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 32%;
-    margin-left: rem(77px);
-    margin: unset;
-    &:first-child {
-        margin-left: 0;
-    }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 32%;
+  margin-left: rem(77px);
+  margin: unset;
+  &:first-child {
+    margin-left: 0;
+  }
 
-    &:not(:first-child) {
-        &::before {
-            position: absolute;
-            content: '';
-            display: block;
-            width: rem(67px);
-            height: rem(21px);
-            background-image: url(../img/why/discs.png);
-            left: -25%;
-            top: 20%;
+  &:not(:first-child) {
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: rem(67px);
+      height: rem(21px);
+      background-image: url(../img/why/discs.png);
+      left: -25%;
+      top: 20%;
 
-            @include tablets {
-                display: none;
-            }
-        }
+      @include tablets {
+        display: none;
+      }
     }
+  }
 
-    @include tablets {
-        margin-left: 0;
-        margin-top: rem(15px);
-    }
+  @include tablets {
+    margin-left: 0;
+    margin-top: rem(15px);
+  }
 
-    @include phones {
-        width: 80%;
-    }
+  @include phones {
+    width: 80%;
+  }
 }
 
 .why__advantages-pic {
-    height: 125px;
-    width: 125px;
-    border-radius: 50%;
-    background-color: $grey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-        display: block;        
-    }
-    @include phones {
-        height: 70px;
-        width: 70px;
-    }
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+  background-color: $grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    display: block;
+  }
+  @include phones {
+    height: 70px;
+    width: 70px;
+  }
 }
 
 .why__advantages-title {
-    margin-top: rem(30px);
-    @include phones {
-        margin-top: rem(10px);
-        font-size: 16px;
-    }
+  margin-top: rem(30px);
+  @include phones {
+    margin-top: rem(10px);
+    font-size: 16px;
+  }
 }
 
 .why__advantage-desc {
-    @include desc;
-    font-weight: 300;
-    margin-top: rem(20px);
-    
-    @include phones {
+  @include desc;
+  font-weight: 300;
+  margin-top: rem(20px);
+
+  @include phones {
     margin-top: rem(10px);
     font-size: 12px;
     width: 80%;
-    }
+  }
 }
 
 .why__advantages-svg {
-    width: 58%;
-    fill: transparent;
-    stroke: #2a2a29;
-    stroke-width: rem(0.8px);
+  width: 58%;
+  fill: transparent;
+  stroke: #2a2a29;
+  stroke-width: rem(0.8px);
 }
