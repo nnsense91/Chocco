@@ -1,5 +1,5 @@
 .product {
-  background-color: #f8faf9;
+  background-color: #f8faf9;  
 }
 
 .container--product {
@@ -96,6 +96,7 @@
     font-weight: bold;
     color: #333333;
   }
+  
   @include tablets {
     width: 50%;
   }

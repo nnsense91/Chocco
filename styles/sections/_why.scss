@@ -27,7 +27,7 @@
     align-items: center;
     
     @include tablets {
-        flex-direction: column;
+        flex-direction: column;        
     }
 }
 
@@ -40,8 +40,7 @@
         margin-top: rem(75px);
     }
     @include phones {
-        width: 100%;
-        margin-top: 0;
+        width: 100%;        
     }
 }
 
@@ -49,7 +48,7 @@
     @include desc;
     margin-top: 8px;
     @include phones {
-    font-size: 14px;
+    font-size: 14px;    
     margin-top: 4px;
     }
 }
@@ -63,6 +62,7 @@
         flex-direction: column;
         align-items: center;
         margin-top: 0;
+        margin-bottom: rem(75px);
     }
 }
 
@@ -73,6 +73,7 @@
     align-items: center;
     width: 32%;
     margin-left: rem(77px);
+    margin: unset;
     &:first-child {
         margin-left: 0;
     }

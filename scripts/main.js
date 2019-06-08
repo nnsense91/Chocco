@@ -147,3 +147,91 @@ itemGuy.addEventListener("click", function(e) {
     "Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно.";
   topAuthor.innerText = "Вадим Грачев";
 });
+
+// //aside - smooth scroll
+// $('.aside__link').on('click', function(e) {
+//   e.preventDefault();
+//   $(".aside__active").removeClass("aside__active");
+//   $('html, body').animate({scrollTop: $($(this).attr("href")).offset().top}, 500);
+// });
+
+// //aside scroll
+// $(window).scroll(()=> {
+//   let wTop = $(window).scrollTop();
+//   let welcome = $("#welcome").offset().top;
+//   let why = $("#why").offset().top;
+//   let product = $("#product").offset().top;
+//   let team = $("#team").offset().top;
+//   let menu = $("#menu").offset().top;
+//   let reviews = $("#reviews").offset().top;
+//   let order = $("#order").offset().top;
+//   let contacts = $("#contacts").offset().top;
+//   if ((why-wTop) < 100 && (why-wTop) > -100) {
+//     $(".aside__active").removeClass("aside__active");
+//     $('#asWhy').addClass("aside__active");
+//   } else if ((welcome-wTop) < 100 && (welcome-wTop) > -100) {
+//     $(".aside__active").removeClass("aside__active");
+//     $('#asWelcome').addClass("aside__active");
+//   } else if ((product-wTop) < 100 && (product-wTop) > -100) {
+//     $(".aside__active").removeClass("aside__active");
+//     $('#asProduct').addClass("aside__active");
+//   } else if ((team-wTop) < 100 && (team-wTop) > -100) {
+//     $(".aside__active").removeClass("aside__active");
+//     $('#asTeam').addClass("aside__active");
+//   } else if ((menu-wTop) < 100 && (menu-wTop) > -100) {
+//     $(".aside__active").removeClass("aside__active");
+//     $('#asMenu').addClass("aside__active");
+//   } else if ((reviews-wTop) < 100 && (reviews-wTop) > -100) {
+//     $(".aside__active").removeClass("aside__active");
+//     $('#asReviews').addClass("aside__active");
+//   } else if ((order-wTop) < 100 && (order-wTop) > -100) {
+//     $(".aside__active").removeClass("aside__active");
+//     $('#asOrder').addClass("aside__active");
+//   } else if ((contacts-wTop) < 100 && (contacts-wTop) > -100) {
+//     $(".aside__active").removeClass("aside__active");
+//     $('#asContacts').addClass("aside__active");
+//   };
+// });
+
+const sections = $(".section");
+const display = $(".maincontent");
+
+const performTransition = function(sectionEq) {
+  const position = sectionEq * -100 + "%";
+
+  sections
+    .eq(sectionEq)
+    .addClass("section-active")
+    .siblings()
+    .removeClass("section-active");
+
+  display.css({
+    transform: `translateY(${position})`
+  });
+};
+
+const scrollToSection = function(direction) {
+  const activeSection = sections.filter(".section-active");
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+
+  if (direction === "next") {
+    performTransition(nextSection.index());
+  }
+
+  if (direction === "prev") {
+    performTransition(prevSection.index());
+  }
+};
+
+$(".wrapper").on("wheel", function(e) {
+  const deltaY = e.originalEvent.deltaY;
+
+  if (deltaY > 0) {
+    scrollToSection("next");
+  }
+
+  if (deltaY < 0) {
+    scrollToSection("prev");
+  }
+});
