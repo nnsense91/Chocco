@@ -1,252 +1,250 @@
 .welcome {
-    width: 100%;
-    color: $white;
-    background-color: $blue;
-    background-image: url(../img/welcome/banner.jpg);
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: relative;
+  width: 100%;
+  color: $white;
+  background-color: $blue;
+  background-image: url(../img/welcome/banner.jpg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
 
-    @include tablets {
-        background-position: right top;
-        background-size: 140%;
-    }
+  @include tablets {
+    background-position: right top;
+    background-size: 140%;
+  }
 
-    @include phones {
-        background-position: 110% top;
-    }
+  @include phones {
+    background-position: 110% top;
+  }
 }
 
 .welcome__fruit-pic {
-    position: absolute;
-    bottom: rem(-52px);
-    right: rem(13px);
-    z-index: 1;
-    @include tablets {
-        top: rem(200px);
-        right: rem(140px);        
-    }
-    @include phones {
-        transform: scale(0.8,0.8);
-        top: 0;
-        right: rem(-100px);
-    }
+  position: absolute;
+  bottom: rem(-52px);
+  right: rem(13px);
+  z-index: 1;
+  @include tablets {
+    top: rem(200px);
+    right: rem(140px);
+  }
+  @include phones {
+    transform: scale(0.8, 0.8);
+    top: 0;
+    right: rem(-100px);
+  }
 }
 
 .container--welcome {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    @include tablets {
-        align-items: unset;
-    }
+  @include tablets {
+    align-items: unset;
+  }
 }
 
 .welcome__main-content {
-    position: relative;
-    display: flex;
-    @include tablets {
-        margin-top: rem(-22px);
-        position: unset;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+  position: relative;
+  display: flex;
+  @include tablets {
+    margin-top: rem(-22px);
+    position: unset;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
-.welcome__main-text {    
-    // position: relative;
-    z-index: 2;
-    width: 50%;
+.welcome__main-text {
+  // position: relative;
+  z-index: 2;
+  width: 50%;
 
-    @include tablets {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  @include tablets {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .welcome__main-pic {
-    position: absolute;
-    right: rem(-55px);
-    top: rem(-120px);
+  position: absolute;
+  right: rem(-55px);
+  top: rem(-120px);
 
-    @include tablets {
-        position: unset;
-        display: block;
-        width: 55.25%;
-    }
+  @include tablets {
+    position: unset;
+    display: block;
+    width: 55.25%;
+  }
 }
 
 .welcome__title {
-    font-family: AlegreyaSans;
-    font-size: 60px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1;    
-    text-align: left;    
-    text-transform: uppercase;
+  font-family: AlegreyaSans;
+  font-size: 60px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  text-align: left;
+  text-transform: uppercase;
 
-    @include tablets {
-        margin-top: rem(70px);
-        text-align: center;
-    }
-    @include phones {
-        font-size: 40px;
-        margin-top: 0;
-    }
+  @include tablets {
+    margin-top: rem(70px);
+    text-align: center;
+  }
+  @include phones {
+    font-size: 40px;
+    margin-top: 0;
+  }
 }
 
 .welcome__desc {
-    margin-top: rem(15px);
-    font-family: AlegreyaSans;
-    font-size: 21px;
-    font-weight: normal;
-    font-style: normal;
+  margin-top: rem(15px);
+  font-family: AlegreyaSans;
+  font-size: 21px;
+  font-weight: normal;
+  font-style: normal;
 
-    @include tablets {
-        width: 50%;
-    }
-    @include phones {
-        font-size: 17px;
-        width: 100%;
-    }
+  @include tablets {
+    width: 50%;
+  }
+  @include phones {
+    font-size: 17px;
+    width: 100%;
+  }
 }
 
 .button {
-    margin-top: rem(45px);
-    color: $green;
-    font-family: AlegreyaSans;
-    font-size: 19px;
-    font-weight: 800;
-    font-style: normal;
-    text-transform: uppercase;    
-    padding: 18px  35px;
-    border: transparent;
-    border-radius: 30px;
-    background-color: $white;    
-    &:hover {
-        cursor: pointer;
-    }
-    @include phones {
-        margin-top: rem(20px);
-    }
+  margin-top: rem(45px);
+  color: $green;
+  font-family: AlegreyaSans;
+  font-size: 19px;
+  font-weight: 800;
+  font-style: normal;
+  text-transform: uppercase;
+  padding: 18px 35px;
+  border: transparent;
+  border-radius: 30px;
+  background-color: $white;
+  &:hover {
+    cursor: pointer;
+  }
+  @include phones {
+    margin-top: rem(20px);
+  }
 }
 
 .welcome__advantages {
-    position: relative;
-    z-index: 2;
-    margin-top: rem(68px);
-    padding-bottom: rem(47px);
-    
-    @include tablets {
-        width: 80%;
-    }
-    @include phones {
-        margin-top: rem(30px);
-        padding-bottom: 0;
-    }
+  position: relative;
+  z-index: 2;
+  margin-top: rem(68px);
+  padding-bottom: rem(47px);
+
+  @include tablets {
+    width: 80%;
+  }
+  @include phones {
+    margin-top: rem(30px);
+    padding-bottom: 0;
+  }
 }
 
 .welcome__advantages-list {
-    display: flex;
-    width: 100%;    
-    margin-left: rem(55px);
+  display: flex;
+  width: 100%;
+  margin-left: rem(55px);
 
-    @include tablets {
-        margin-left: 50px;
-        justify-content: space-between;
-    }
+  @include tablets {
+    margin-left: 50px;
+    justify-content: space-between;
+  }
 
-    @include phones{
-        margin-left: 0;
-    }
+  @include phones {
+    margin-left: 0;
+  }
 }
 
 .welcome__advantages-item {
-    position: relative;
-    font-family: AlegreyaSans;
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    width: 20%;
-    margin-left: 90px;
-    &:first-child {
-        margin-left: 0;
-    }
-    &:nth-child(2) {        
-        padding-left: rem(7px);
-    }
-    &:nth-child(3) {        
-        margin-left: 73px;
-    }
+  position: relative;
+  font-family: AlegreyaSans;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  width: 20%;
+  margin-left: 90px;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:nth-child(2) {
+    padding-left: rem(7px);
+  }
+  &:nth-child(3) {
+    margin-left: 73px;
+  }
 
-    @include tablets {
-        width: 15%;
-    }
-    @include phones {
-        font-size: 12px;
-        margin-left: 40px;
-        width: 30%;
-    }
+  @include tablets {
+    width: 15%;
+  }
+  @include phones {
+    font-size: 12px;
+    margin-left: 40px;
+    width: 30%;
+  }
 }
 
 .welcome__advantages-ico {
-    position: absolute;
-    left: -55px;
-    top: 0;
-    fill: transparent;
-    stroke: #b0f7ff;
-    stroke-width: rem(0.8px);
-    width: 50px;
-    height: 48px;
-    @include phones {
-        width: 30px;
-        height: 30px;
-        left: rem(-45px);
-    }
+  position: absolute;
+  left: -55px;
+  top: 0;
+  fill: transparent;
+  stroke: #b0f7ff;
+  stroke-width: rem(0.8px);
+  width: 50px;
+  height: 48px;
+  @include phones {
+    width: 30px;
+    height: 30px;
+    left: rem(-45px);
+  }
 }
 
 .aside {
-    position: fixed;
-    top: 33.5%;
-    right: rem(50px);    
-    z-index: 10;
+  position: fixed;
+  top: 33.5%;
+  right: rem(50px);
+  z-index: 10;
 
-    &__item {
-        margin: 0 0 rem(15.5px) 0;        
-    }
+  &__item {
+    margin: 0 0 rem(15.5px) 0;
+  }
 
-    &__link {
-        position: relative;
-        width: rem(6px);
-        height: rem(6px);
-        display: block;
-        border-radius: 50%;
-        background-color: #6d639c;
-        
-    }
+  &__link {
+    position: relative;
+    width: rem(6px);
+    height: rem(6px);
+    display: block;
+    border-radius: 50%;
+    background-color: #6d639c;
+  }
 
-    @include phones {
-        right: rem(20px);
-    }
+  @include phones {
+    right: rem(20px);
+  }
 }
 
-.aside__active {
-    &::before {
-        display: block;
-        position: absolute;
-        content: '';
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);        
-        border-radius: 50%;
-        width: 12px;
-        height: 12px;
-        border: 1px solid #6d639c;
-        
-    }
+.aside__active > .aside__link {
+  &::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #6d639c;
+  }
 }

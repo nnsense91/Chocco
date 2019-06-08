@@ -92,6 +92,7 @@ submitButton.addEventListener("click", function(e) {
     const response = JSON.parse(xhr.response);
     if (response.status) {
       popup.classList.add("popup--active");
+      console.log("Форма отправлена");
     } else {
       popup.classList.add("popup--active");
       popupText.innerText = "Ошибка сервера";
@@ -195,8 +196,23 @@ itemGuy.addEventListener("click", function(e) {
 
 const sections = $(".section");
 const display = $(".maincontent");
+let inscroll = false;
+
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
+
+const switchActiveClassSideMenu = menuItemIndex => {
+  $(".aside__item")
+    .eq(menuItemIndex)
+    .addClass("aside__active")
+    .siblings()
+    .removeClass("aside__active");
+};
 
 const performTransition = function(sectionEq) {
+  if (inscroll) return;
+
+  inscroll = true;
   const position = sectionEq * -100 + "%";
 
   sections
@@ -208,6 +224,11 @@ const performTransition = function(sectionEq) {
   display.css({
     transform: `translateY(${position})`
   });
+
+  setTimeout(function() {
+    switchActiveClassSideMenu(sectionEq);
+    inscroll = false;
+  }, 1300); //1300 - TransitionDuration of .maincontent (1s) + 300ms delay
 };
 
 const scrollToSection = function(direction) {
@@ -215,11 +236,11 @@ const scrollToSection = function(direction) {
   const nextSection = activeSection.next();
   const prevSection = activeSection.prev();
 
-  if (direction === "next") {
+  if (direction === "next" && nextSection.length) {
     performTransition(nextSection.index());
   }
 
-  if (direction === "prev") {
+  if (direction === "prev" && prevSection.length) {
     performTransition(prevSection.index());
   }
 };
@@ -235,3 +256,41 @@ $(".wrapper").on("wheel", function(e) {
     scrollToSection("prev");
   }
 });
+
+$(".wrapper").on("touchmove", e => {
+  e.preventDefault();
+});
+
+$(document).on("keydown", e => {
+  switch (e.keyCode) {
+    case 40:
+      scrollToSection("next");
+    case 38:
+      scrollToSection("prev");
+      break;
+  }
+});
+
+$("[data-scroll-to]").on("click", e => {
+  e.preventDefault();
+
+  const target = $(e.currentTarget).attr("data-scroll-to");
+  console.log(target);
+  performTransition(target);
+});
+
+if (isMobile) {
+  $(window).swipe({
+    swipe: function(
+      event,
+      direction,
+      distance,
+      duration,
+      fingerCount,
+      fingerData
+    ) {
+      const nextOrPrev = direction === "up" ? "next" : "prev";
+      scrollToSection(nextOrPrev);
+    }
+  });
+}

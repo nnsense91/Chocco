@@ -12,35 +12,38 @@
 </head>
 
 <body>
+    <aside class="aside" id="aside">
+        <ul class="aside__list">
+            <li class="aside__item aside__active">
+                <a href="" class="aside__link" data-scroll-to="0"></a>
+            </li>
+            <li class="aside__item">
+                <a href="" class="aside__link" data-scroll-to="1"></a>
+            </li>
+            <li class="aside__item">
+                <a href="" class="aside__link" data-scroll-to="2"></a>
+            </li>
+            <li class="aside__item">
+                <a href="" class="aside__link" data-scroll-to="3"></a>
+            </li>
+            <li class="aside__item">
+                <a href="" class="aside__link" data-scroll-to="4"></a>
+            </li>
+            <li class="aside__item">
+                <a href="" class="aside__link" data-scroll-to="5"></a>
+            </li>
+            <li class="aside__item">
+                <a href="" class="aside__link" data-scroll-to="6"></a>
+            </li>
+        </ul>
+    </aside>
+    <div class="popup">
+            <div class="popup__content">
+                <p class="popup__desc">Сообщение отправлено!</p>
+                <button class="popup__button button">Закрыть</button>
+            </div>
+        </div>
     <div class="wrapper">
-        <aside class="aside" id="aside">
-            <ul class="aside__list">
-                <li class="aside__item">
-                    <a href="#welcome" class="aside__link aside__active" id="asWelcome"></a>
-                </li>
-                <li class="aside__item">
-                    <a href="#why" class="aside__link" id="asWhy"></a>
-                </li>
-                <li class="aside__item">
-                    <a href="#product" class="aside__link" id="asProduct"></a>
-                </li>
-                <li class="aside__item">
-                    <a href="#team" class="aside__link" id="asTeam"></a>
-                </li>
-                <li class="aside__item">
-                    <a href="#menu" class="aside__link" id="asMenu"></a>
-                </li>
-                <li class="aside__item">
-                    <a href="#reviews" class="aside__link" id="asReviews"></a>
-                </li>
-                <li class="aside__item">
-                    <a href="#order" class="aside__link" id="asOrder"></a>
-                </li>
-                <li class="aside__item">
-                    <a href="#contacts" class="aside__link" id="asContacts"></a>
-                </li>
-            </ul>
-        </aside>
         <div class="maincontent">
             <section class="welcome section section-active" id="welcome">
                 <img src="./img/welcome/leaf-and-fruit.png" alt="ягоды" class="welcome__fruit-pic">
@@ -53,25 +56,25 @@
                             <nav class="header__sidebar">
                                 <ul class="sidebar__list">
                                     <li class="sidebar__item">
-                                        <a href="#why" class="sidebar__link">О нас</a>
+                                        <a href="" class="sidebar__link" data-scroll-to="1">О нас</a>
                                     </li>
                                     <li class="sidebar__item">
-                                        <a href="#product" class="sidebar__link">Батончики</a>
+                                        <a href="" class="sidebar__link" data-scroll-to="2">Батончики</a>
                                     </li>
                                     <li class="sidebar__item">
-                                        <a href="#team" class="sidebar__link">Команда</a>
+                                        <a href="" class="sidebar__link" data-scroll-to="3">Команда</a>
                                     </li>
                                     <li class="sidebar__item">
-                                        <a href="#menu" class="sidebar__link">Меню</a>
+                                        <a href="" class="sidebar__link" data-scroll-to="4">Меню</a>
                                     </li>
                                     <li class="sidebar__item">
-                                        <a href="#reviews" class="sidebar__link">Отзывы</a>
+                                        <a href="" class="sidebar__link" data-scroll-to="5">Отзывы</a>
                                     </li>
                                     <li class="sidebar__item">
-                                        <a href="#" class="sidebar__link">Как мы работаем</a>
+                                        <a href="" class="sidebar__link" data-scroll-to="6">Как мы работаем</a>
                                     </li>
                                     <li class="sidebar__item">
-                                        <a href="#contacts" class="sidebar__link">Контакты</a>
+                                        <a href="" class="sidebar__link" data-scroll-to="7">Контакты</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -513,13 +516,7 @@
                                 <button type="reset" class="order__button-reset">Очистить</button>
                             </div>
                         </div>
-                    </form>
-                    <div class="popup">
-                        <div class="popup__content">
-                            <p class="popup__desc">Сообщение отправлено!</p>
-                            <button class="popup__button button">Закрыть</button>
-                        </div>
-                    </div>
+                    </form>                    
                 </div>
             </section>
     
@@ -568,7 +565,9 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./scripts/owl.carousel.min.js"></script>
-    <script src="./scripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+        <script src="./scripts/main.js"></script>
 </body>
 
 </html>
