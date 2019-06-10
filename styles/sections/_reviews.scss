@@ -1,154 +1,161 @@
 .reviews {
-    position: relative;
+  position: relative;
 }
 
 .reviews__strawberry {
-    position: absolute;
-    right: -30px;
-    top: -10px;
-    @include tablets{ 
+  position: absolute;
+  right: -30px;
+  top: -10px;
+  @include tablets {
     transform: scale(0.6);
-    }
-    @include phones{ 
+  }
+  @include phones {
     transform: scale(0.4);
     right: -55px;
     top: -25px;
-    }
+  }
 }
 
 .container--reviews {
-    display: flex;
-    align-items: center;
-    @include tablets {
-        // align-items: unset;
-    }
+  display: flex;
+  align-items: center;
+  @include tablets {
+    // align-items: unset;
+  }
 }
 
 .reviews__title {
-    text-align: center;
-    @include phones {
-        font-size: 30px;
-    }
+  text-align: center;
+  @include phones {
+    font-size: 30px;
+  }
 }
 
 .reviews__top-avatar {
-    text-align: center;   
-    img {
-        width: 100%;
-        @include tablets {
-        width: 80%;
-        }
-    }    
+  text-align: center;
+  img {
+    width: 100%;
+    @include tablets {
+      width: 80%;
+    }
+  }
 }
 
 .reviews__top-review {
-    margin-top: rem(45px);
-    display: flex;
-    background-image: url(../img/reviews/raspberries.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    padding: rem(50px) 0 rem(50px) rem(45.5px);
+  margin-top: rem(45px);
+  display: flex;
+  background-image: url(../img/reviews/raspberries.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  padding: rem(50px) 0 rem(50px) rem(45.5px);
 
-    @include tablets {
-        flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
-        width: 60%;
-        background-color: #f8faf9;
-    }
-    @include phones {
-        width: 90%;
-        padding: 0;
-    }
-}   
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 60%;
+    background-color: #f8faf9;
+  }
+  @include phones {
+    width: 90%;
+    padding: 0;
+  }
+}
 
 .reviews__top-content {
-    width: 50%;   
-    margin-left: rem(20px);
+  width: 50%;
+  margin-left: rem(20px);
 
-    @include tablets {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-        width: 100%;
-        text-align: center;
-    }
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .reviews__top-title {
-    margin-top: rem(12px);
-    font-family: AlegreyaSans;
-    font-size: 30px;
-    font-weight: 500;
-    font-style: normal;
-    color: #323232;
-    @include phones {
-        font-size: 20px;
-    }    
+  margin-top: rem(12px);
+  font-family: AlegreyaSans;
+  font-size: 30px;
+  font-weight: 500;
+  font-style: normal;
+  color: #323232;
+  @include phones {
+    font-size: 20px;
+  }
 }
 
 .reviews__top-text {
-    margin-top: rem(24px);    
-    @include desc;
-    line-height: normal;
-    @include phones {
-        font-size: 14px;
-    }
+  margin-top: rem(24px);
+  @include desc;
+  line-height: normal;
+  @include phones {
+    font-size: 14px;
+    margin-top: rem(20px);
+  }
 }
 
 .reviews__top-author {
-    display: block;
-    @include desc;
-    font-weight: 500;
-    margin-top: rem(26px);
+  display: block;
+  @include desc;
+  font-weight: 500;
+  margin-top: rem(26px);
 }
 
-
 .reviews__all {
-    margin-top: rem(38px);
-    display: flex;
-    justify-content: center;
-
-    
+  margin-top: rem(38px);
+  display: flex;
+  justify-content: center;
 }
 
 .reviews__all-item {
-    margin-left: rem(42px);
+  margin-left: rem(42px);
 
-    &:first-child {
-        margin-left: 0;
-    }
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 .reviews__all-pic {
-    cursor: pointer;
-    width: rem(92.5px);
-    height: rem(92.5px);    
-    background-size: cover;
-    border-radius: 50%;
+  cursor: pointer;
+  width: rem(92.5px);
+  height: rem(92.5px);
+  background-size: cover;
+  border-radius: 50%;
+  @include phones {
+    width: rem(72.5px);
+    height: rem(72.5px);
+  }
 }
 
 @each $item in (girl, girl2, guy) {
-    .reviews__all-#{$item} {
-        background-image: url(../img/reviews/#{$item}.jpg);
-        background-repeat: no-repeat;
-    }
+  .reviews__all-#{$item} {
+    background-image: url(../img/reviews/#{$item}.jpg);
+    background-repeat: no-repeat;
+  }
 }
 
 .reviews--active {
-    position: relative;
-    &::before {
-        content: '';
-        position: absolute;        
-        width: rem(92px);
-        height: rem(92px);
-        border: rem(8px) solid $green;
-        background-color: $green;
-        border-radius: 50%;
-        top: rem(-8px);
-        left: rem(-8px);
-        z-index: -1;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: rem(92px);
+    height: rem(92px);
+    border: rem(8px) solid $green;
+    background-color: $green;
+    border-radius: 50%;
+    top: rem(-8px);
+    left: rem(-8px);
+    z-index: -1;
+    @include phones {
+      border: rem(8px) solid $green;
+      width: rem(72.5px);
+      height: rem(72.5px);
     }
+  }
 }

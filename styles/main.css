@@ -1055,7 +1055,8 @@ h3 {
   line-height: normal; }
   @media screen and (max-width: 480px) {
     .reviews__top-text {
-      font-size: 14px; } }
+      font-size: 14px;
+      margin-top: 1.25rem; } }
 
 .reviews__top-author {
   display: block;
@@ -1087,6 +1088,10 @@ h3 {
   height: 5.78125rem;
   background-size: cover;
   border-radius: 50%; }
+  @media screen and (max-width: 480px) {
+    .reviews__all-pic {
+      width: 4.53125rem;
+      height: 4.53125rem; } }
 
 .reviews__all-girl {
   background-image: url(../img/reviews/girl.jpg);
@@ -1103,7 +1108,7 @@ h3 {
 .reviews--active {
   position: relative; }
   .reviews--active::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 5.75rem;
     height: 5.75rem;
@@ -1113,6 +1118,11 @@ h3 {
     top: -0.5rem;
     left: -0.5rem;
     z-index: -1; }
+    @media screen and (max-width: 480px) {
+      .reviews--active::before {
+        border: 0.5rem solid #0f5a47;
+        width: 4.53125rem;
+        height: 4.53125rem; } }
 
 .team {
   position: relative; }
@@ -1789,6 +1799,235 @@ address {
   cursor: pointer; }
   .footer__social-ico:hover {
     fill: #000000; }
+
+.video {
+  background-color: #f8faf9;
+  position: relative; }
+
+.video__berries {
+  position: absolute;
+  top: -3.125rem; }
+  @media screen and (max-width: 768px) {
+    .video__berries {
+      -webkit-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+      transform: scale(0.6);
+      left: -4.375rem;
+      top: -8.125rem; } }
+  @media screen and (max-width: 480px) {
+    .video__berries {
+      left: -4.375rem;
+      top: -8.125rem;
+      -webkit-transform: scale(0.4);
+      -ms-transform: scale(0.4);
+      transform: scale(0.4); } }
+
+.video__leaf {
+  position: absolute;
+  top: -3.125rem; }
+  @media screen and (max-width: 768px) {
+    .video__leaf {
+      -webkit-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+      transform: scale(0.6);
+      left: -3.75rem;
+      top: -15rem; } }
+  @media screen and (max-width: 480px) {
+    .video__leaf {
+      left: -3.75rem;
+      top: -15rem;
+      -webkit-transform: scale(0.4);
+      -ms-transform: scale(0.4);
+      transform: scale(0.4); } }
+
+.container--video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.video__title {
+  text-align: center; }
+  @media screen and (max-width: 480px) {
+    .video__title {
+      font-size: 30px; } }
+
+.player {
+  margin-top: 50px;
+  width: 70%; }
+  @media screen and (max-width: 768px) {
+    .player {
+      width: 90%; } }
+
+.player__splash {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: url(../img/video/splash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 30; }
+
+.player__splash-play {
+  display: block; }
+
+.player__wrapper {
+  position: relative;
+  background-color: #3e3e3e;
+  width: 100%;
+  height: 370px; }
+  @media screen and (max-width: 480px) {
+    .player__wrapper {
+      height: 200px; } }
+
+.player__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  background-color: #3e3e3e;
+  padding: 4px 20px 8px; }
+  @media screen and (max-width: 480px) {
+    .player__controls {
+      padding: 2px 4px; } }
+
+.player__duration {
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.player__line {
+  position: relative;
+  height: 4px;
+  padding: 0;
+  width: 100%;
+  margin-left: 0.625rem;
+  background: #626262;
+  z-index: 20; }
+  @media screen and (max-width: 480px) {
+    .player__line {
+      width: 90%; } }
+
+.player__volume {
+  margin-left: 5%;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  @media screen and (max-width: 480px) {
+    .player__volume {
+      margin-left: 1%; } }
+
+.player__line-button {
+  position: absolute;
+  border: none;
+  outline: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  left: 0;
+  top: -4px;
+  background: #626262; }
+  @media screen and (max-width: 480px) {
+    .player__line-button {
+      width: 12px;
+      height: 12px; } }
+
+.player__volume-button {
+  left: 20%; }
+
+@media screen and (max-width: 480px) {
+  .player__volume-line {
+    width: 80%; } }
+
+.player__volume-pic {
+  height: 22px;
+  width: 20px;
+  background-image: url(../img/video/volume.png);
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media screen and (max-width: 480px) {
+    .player__volume-pic {
+      height: 16px;
+      width: 14px; } }
+
+.player__main-btn {
+  width: 16px;
+  height: 22px;
+  overflow: hidden; }
+
+.player__start {
+  background-image: url(../img/video/play_gray.png); }
+
+.paused {
+  background: #3e3e3e;
+  position: relative; }
+  .paused::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: #626262; }
+    @media screen and (max-width: 480px) {
+      .paused::after {
+        width: 3px;
+        height: 70%;
+        top: 20%;
+        left: 20%; } }
+  .paused::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: #626262; }
+    @media screen and (max-width: 480px) {
+      .paused::before {
+        right: 20%;
+        top: 20%;
+        height: 70%;
+        width: 3px; } }
+
+.player__wrapper--active > .player__splash {
+  display: none; }
+
+#yt-player {
+  width: 100%;
+  height: 100%; }
+
+.html5-video-player {
+  -o-object-fit: contain;
+  object-fit: contain; }
 
 /**
  * Owl Carousel v2.3.4
