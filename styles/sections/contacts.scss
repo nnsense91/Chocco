@@ -1,7 +1,10 @@
 .contacts {
-    display: flex;
-    align-items: flex-end;
-    background-image: url(../img/contacts/map.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
 }
