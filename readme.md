@@ -1,2 +1,2 @@
-# Study project. 
+Study project. 
 Egorov Ivan.
